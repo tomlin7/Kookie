@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Kookie.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\billy\Documents\projects\dotnet\Kookie\.idea\.idea.Kookie\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
