@@ -38,12 +38,29 @@ namespace Kookie
                 }
 
                 var parser = new Parser(line);
-                var expression = parser.Parse();
+                var syntaxTree = parser.Parse();
 
                 var color = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                PrettyPrint(expression);
+                PrettyPrint(syntaxTree.Root);
                 Console.ForegroundColor = color;
+
+                if (!syntaxTree.Diagnostics.Any())
+                {
+                    var e = new Evaluator(syntaxTree.Root);
+                    var result = e.Evaluate();
+                    Console.WriteLine(result);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    foreach (var diagnostic in syntaxTree.Diagnostics)
+                    {
+                        Console.WriteLine(diagnostic);
+                    }
+
+                    Console.ForegroundColor = color;
+                }
             }
         }
 
@@ -59,7 +76,7 @@ namespace Kookie
             Console.Write(marker);
             Console.Write(node.Kind);
 
-            if (node is SyntaxToken token && token.Value != null)
+            if (node is SyntaxToken {Value: { }} token)
             {
                 Console.Write(" ");
                 Console.Write(token.Value);
@@ -158,7 +175,10 @@ namespace Kookie
 
                 var length = _position - start;
                 var text = _text.Substring(start, length);
-                int.TryParse(text, out var value);
+                if (!int.TryParse(text, out var value))
+                {
+                    _diagnostics.Add($"The number {_text} isn't a valid Int32.");
+                }
                 return new SyntaxToken(SyntaxKind.NumberToken, start, text, value);
             }
             
@@ -260,6 +280,20 @@ namespace Kookie
             yield return Right;
         }
     }
+
+    sealed class SyntaxTree
+    {
+        public IEnumerable<string> Diagnostics { get; }
+        public ExpressionSyntax Root { get; }
+        public SyntaxToken EndOfFileToken { get; }
+
+        public SyntaxTree(IEnumerable<string> diagnostics, ExpressionSyntax root, SyntaxToken EndOfFileToken)
+        {
+            Diagnostics = diagnostics.ToArray();
+            Root = root;
+            this.EndOfFileToken = EndOfFileToken;
+        }
+    }
     
     internal class Parser
     {
@@ -288,6 +322,8 @@ namespace Kookie
             _diagnostics.AddRange(lexer.Diagnostics);
         }
 
+        public IEnumerable<string> Diagnostics => _diagnostics;
+
         private SyntaxToken Peek(int offset)
         {
             var index = _position + offset;
@@ -314,11 +350,18 @@ namespace Kookie
             return new SyntaxToken(kind, Current.Position, null, null);
         }
 
-        public ExpressionSyntax Parse()
+        public SyntaxTree Parse()
+        {
+            var expression = ParseExpression();
+            var endOfFileToken = Match(SyntaxKind.EndOfFileToken);
+            return new SyntaxTree(_diagnostics, expression, endOfFileToken);
+        }
+
+        public ExpressionSyntax ParseExpression()
         {
             var left = ParsePrimaryExpression();
 
-            while (Current.Kind == SyntaxKind.PlusToken || Current.Kind == SyntaxKind.MinusToken)
+            while (Current.Kind is SyntaxKind.PlusToken or SyntaxKind.MinusToken or SyntaxKind.StarToken or SyntaxKind.SlashToken)
             {
                 var operatorToken = NextToken();
                 var right = ParsePrimaryExpression();
@@ -332,6 +375,62 @@ namespace Kookie
         {
             var numberToken = Match(SyntaxKind.NumberToken);
             return new NumberExpressionSyntax(numberToken);
+        }
+    }
+
+    internal class Evaluator
+    {
+        private readonly ExpressionSyntax _root;
+
+        public Evaluator(ExpressionSyntax root)
+        {
+            _root = root;
+        }
+
+        public int Evaluate()
+        {
+            return EvaluateExpression(_root);
+        }
+
+        private int EvaluateExpression(ExpressionSyntax node)
+        {
+            // BinaryExpression
+            // NumberExpression
+
+            if (node is NumberExpressionSyntax numberExpressionSyntax)
+            {
+                return (int) numberExpressionSyntax.NumberToken.Value;
+            }
+
+            if (node is BinaryExpressionSyntax binaryExpressionSyntax)
+            {
+                var left = EvaluateExpression(binaryExpressionSyntax.Left);
+                var right = EvaluateExpression(binaryExpressionSyntax.Right);
+
+                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.PlusToken)
+                {
+                    return left + right;
+                }
+
+                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.MinusToken)
+                {
+                    return left - right;
+                }
+
+                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.StarToken)
+                {
+                    return left * right;
+                }
+
+                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.SlashToken)
+                {
+                    return left / right;
+                }
+
+                throw new Exception($"Unexpected binary operator {binaryExpressionSyntax.OperatorToken.Kind}");
+            }
+            
+            throw new Exception($"Unexpected node {node.Kind}");
         }
     }
 }
