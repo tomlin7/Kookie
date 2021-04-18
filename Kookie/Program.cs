@@ -47,12 +47,16 @@ namespace Kookie
             }
         }
 
-        static void PrettyPrint(SyntaxNode node, string indent = "")
+        static void PrettyPrint(SyntaxNode node, string indent = "", bool isLast = true)
         {
             // ├──
             // │
             // └──
+            
+            var marker = isLast ? "└──" : "├──";
+            
             Console.Write(indent);
+            Console.Write(marker);
             Console.Write(node.Kind);
 
             if (node is SyntaxToken token && token.Value != null)
@@ -62,11 +66,13 @@ namespace Kookie
             }
             
             Console.WriteLine();
-            indent += "    ";
+            indent += isLast ? "    " : "│   ";
+
+            var lastChild = node.GetChildren().LastOrDefault();
 
             foreach (var child in node.GetChildren())
             {
-                PrettyPrint(child, indent);
+                PrettyPrint(child, indent, child == lastChild);
             }
         }
     }
@@ -112,12 +118,14 @@ namespace Kookie
     {
         private readonly string _text;
         private int _position;
+        private List<string> _diagnostics = new List<string>();
         
         public Lexer(string text)
         {
             _text = text;
         }
 
+        public IEnumerable<string> Diagnostics => _diagnostics;
         private char Current()
         {
             return _position >= _text.Length ? '\0' : _text[_position];
@@ -197,7 +205,8 @@ namespace Kookie
             {
                 return new SyntaxToken(SyntaxKind.CloseParenthesisToken, _position++, ")", null);
             }
-
+            
+            _diagnostics.Add($"ERROR: bad character input: '{Current()}'");
             return new SyntaxToken(SyntaxKind.BadToken, _position++, _text.Substring(_position - 1, 1), null);
         }
     }
@@ -255,6 +264,8 @@ namespace Kookie
     internal class Parser
     {
         private readonly SyntaxToken[] _tokens;
+        
+        private List<string> _diagnostics = new List<string>();
         private int _position;
         
         public Parser(string text)
@@ -274,6 +285,7 @@ namespace Kookie
             } while (token.Kind != SyntaxKind.EndOfFileToken);
 
             _tokens = tokens.ToArray();
+            _diagnostics.AddRange(lexer.Diagnostics);
         }
 
         private SyntaxToken Peek(int offset)
@@ -297,6 +309,8 @@ namespace Kookie
             {
                 return NextToken();
             }
+            
+            _diagnostics.Add($"ERROR: Unexpected token <{Current.Kind}>, expected <{kind}>");
             return new SyntaxToken(kind, Current.Position, null, null);
         }
 
