@@ -36,9 +36,8 @@ namespace Kookie
                 {
                     return;
                 }
-
-                var parser = new Parser(line);
-                var syntaxTree = parser.Parse();
+                
+                var syntaxTree = SyntaxTree.Parse(line);
 
                 var color = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -107,7 +106,8 @@ namespace Kookie
         BadToken,
         EndOfFileToken,
         NumberExpression,
-        BinaryExpression
+        BinaryExpression,
+        ParenthesizedExpression
     }
     
     internal class SyntaxToken : SyntaxNode
@@ -281,6 +281,28 @@ namespace Kookie
         }
     }
 
+    sealed class ParenthesizedExpressionSyntax : ExpressionSyntax
+    {
+        public SyntaxToken OpenParenthesisToken { get; }
+        public ExpressionSyntax Expression { get; }
+        public SyntaxToken CloseParenthesisToken { get; }
+
+        public ParenthesizedExpressionSyntax(SyntaxToken openParenthesisToken, ExpressionSyntax expression, SyntaxToken closeParenthesisToken)
+        {
+            OpenParenthesisToken = openParenthesisToken;
+            Expression = expression;
+            CloseParenthesisToken = closeParenthesisToken;
+        }
+
+        public override SyntaxKind Kind => SyntaxKind.ParenthesizedExpression;
+        public override IEnumerable<SyntaxNode> GetChildren()
+        {
+            yield return OpenParenthesisToken;
+            yield return Expression;
+            yield return CloseParenthesisToken;
+        }
+    }
+
     sealed class SyntaxTree
     {
         public IEnumerable<string> Diagnostics { get; }
@@ -293,13 +315,19 @@ namespace Kookie
             Root = root;
             this.EndOfFileToken = EndOfFileToken;
         }
+
+        public static SyntaxTree Parse(string text)
+        {
+            var parser = new Parser(text);
+            return parser.Parse();
+        }
     }
     
     internal class Parser
     {
         private readonly SyntaxToken[] _tokens;
         
-        private List<string> _diagnostics = new List<string>();
+        private List<string> _diagnostics = new();
         private int _position;
         
         public Parser(string text)
@@ -350,6 +378,11 @@ namespace Kookie
             return new SyntaxToken(kind, Current.Position, null, null);
         }
 
+        private ExpressionSyntax ParseExpression()
+        {
+            return ParseTerm();
+        }
+
         public SyntaxTree Parse()
         {
             var expression = ParseTerm();
@@ -387,6 +420,14 @@ namespace Kookie
 
         private ExpressionSyntax ParsePrimaryExpression()
         {
+            if (Current.Kind == SyntaxKind.OpenParenthesisToken)
+            {
+                var left = NextToken();
+                var expression = ParseExpression();
+                var right = Match(SyntaxKind.CloseParenthesisToken);
+                return new ParenthesizedExpressionSyntax(left, expression, right);
+            }
+            
             var numberToken = Match(SyntaxKind.NumberToken);
             return new NumberExpressionSyntax(numberToken);
         }
@@ -442,6 +483,11 @@ namespace Kookie
                 }
 
                 throw new Exception($"Unexpected binary operator {binaryExpressionSyntax.OperatorToken.Kind}");
+            }
+
+            if (node is ParenthesizedExpressionSyntax parenthesizedExpressionSyntax)
+            {
+                return EvaluateExpression(parenthesizedExpressionSyntax.Expression);
             }
             
             throw new Exception($"Unexpected node {node.Kind}");
