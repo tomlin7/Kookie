@@ -26,8 +26,10 @@ namespace Kookie
     
     internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var showTree = false;
+
             while (true)
             {
                 Console.Write("> ");
@@ -36,13 +38,27 @@ namespace Kookie
                 {
                     return;
                 }
+
+                switch (line)
+                {
+                    case "#showTree":
+                        showTree = !showTree;
+                        Console.WriteLine(showTree ? "Showing parse trees." : "Not showing parse trees.");
+                        continue;
+                    case "#cls":
+                        Console.Clear();
+                        continue;
+                }
                 
                 var syntaxTree = SyntaxTree.Parse(line);
 
-                var color = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                PrettyPrint(syntaxTree.Root);
-                Console.ForegroundColor = color;
+                if (showTree)
+                {
+                    var color = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    PrettyPrint(syntaxTree.Root);
+                    Console.ForegroundColor = color;
+                }
 
                 if (!syntaxTree.Diagnostics.Any())
                 {
@@ -52,6 +68,7 @@ namespace Kookie
                 }
                 else
                 {
+                    var color = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     foreach (var diagnostic in syntaxTree.Diagnostics)
                     {
