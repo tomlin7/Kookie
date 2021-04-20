@@ -21,9 +21,9 @@ namespace Kookie.CodeAnalysis
             // BinaryExpression
             // NumberExpression
 
-            if (node is NumberExpressionSyntax numberExpressionSyntax)
+            if (node is LiteralExpressionSyntax numberExpressionSyntax)
             {
-                return (int) numberExpressionSyntax.NumberToken.Value;
+                return (int) numberExpressionSyntax.LiteralToken.Value;
             }
 
             if (node is BinaryExpressionSyntax binaryExpressionSyntax)
