@@ -1,6 +1,6 @@
 ﻿namespace Kookie.CodeAnalysis
 {
-    internal enum SyntaxKind
+    public enum SyntaxKind
     {
         NumberToken,
         WhiteSpaceToken,

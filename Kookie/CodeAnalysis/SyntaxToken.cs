@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Kookie.CodeAnalysis
 {
-    internal class SyntaxToken : SyntaxNode
+    public sealed class SyntaxToken : SyntaxNode
     {
         public override SyntaxKind Kind { get; }
         public override IEnumerable<SyntaxNode> GetChildren()

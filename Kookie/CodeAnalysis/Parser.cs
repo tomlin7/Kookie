@@ -2,7 +2,7 @@
 
 namespace Kookie.CodeAnalysis
 {
-    internal class Parser
+    internal sealed class Parser
     {
         private readonly SyntaxToken[] _tokens;
         

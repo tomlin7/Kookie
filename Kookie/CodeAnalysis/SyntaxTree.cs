@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Kookie.CodeAnalysis
 {
-    internal sealed class SyntaxTree
+    public sealed class SyntaxTree
     {
         public IEnumerable<string> Diagnostics { get; }
         public ExpressionSyntax Root { get; }
