@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Kookie.CodeAnalysis
+namespace Kookie.CodeAnalysis.Syntax
 {
     public sealed class ParenthesizedExpressionSyntax : ExpressionSyntax
     {

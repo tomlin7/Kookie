@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Kookie.CodeAnalysis;
+using Kookie.CodeAnalysis.Syntax;
 
 namespace Kookie
 {

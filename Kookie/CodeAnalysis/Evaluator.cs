@@ -1,4 +1,5 @@
 ﻿using System;
+using Kookie.CodeAnalysis.Syntax;
 
 namespace Kookie.CodeAnalysis
 {

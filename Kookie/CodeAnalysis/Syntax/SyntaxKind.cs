@@ -1,4 +1,4 @@
-﻿namespace Kookie.CodeAnalysis
+﻿namespace Kookie.CodeAnalysis.Syntax
 {
     public enum SyntaxKind
     {
