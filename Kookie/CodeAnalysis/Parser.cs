@@ -1,8 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Kookie.CodeAnalysis
 {
+    // Unary operators
+    // +1
+    // -1 * -3
+    // -(3 + 3)
+    // 
+    //    -
+    //    | 
+    //    +
+    //   / \ 
+    //  1  2
+    
     internal sealed class Parser
     {
         private readonly SyntaxToken[] _tokens;
@@ -67,7 +77,19 @@ namespace Kookie.CodeAnalysis
 
         private ExpressionSyntax ParseExpression(int parentPrecedence = 0)
         {
-            var left = ParsePrimaryExpression();
+            ExpressionSyntax left;
+            var unaryOperatorPrecedence = Current.Kind.GetUnaryOperatorPrecedence();
+            if (unaryOperatorPrecedence != 0 && unaryOperatorPrecedence >= parentPrecedence)
+            {
+                var operatorToken = NextToken();
+                var operand = ParseExpression(unaryOperatorPrecedence);
+                left = new UnaryExpressionSyntax(operatorToken, operand);
+            }
+            else
+            {
+                
+                left = ParsePrimaryExpression();
+            }
 
             while (true)
             {

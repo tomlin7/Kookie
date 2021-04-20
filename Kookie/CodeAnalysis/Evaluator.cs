@@ -26,6 +26,24 @@ namespace Kookie.CodeAnalysis
                 return (int) numberExpressionSyntax.LiteralToken.Value;
             }
 
+            if (node is UnaryExpressionSyntax unaryExpressionSyntax)
+            {
+                var operand = EvaluateExpression(unaryExpressionSyntax.Operand);
+                
+                if (unaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.PlusToken)
+                {
+                    return operand;
+                }
+                else if (unaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.MinusToken)
+                {
+                    return -operand;
+                }
+                else
+                {
+                    throw new Exception($"Unexpected unary operator {unaryExpressionSyntax.OperatorToken.Kind}");
+                }
+            }
+
             if (node is BinaryExpressionSyntax binaryExpressionSyntax)
             {
                 var left = EvaluateExpression(binaryExpressionSyntax.Left);
