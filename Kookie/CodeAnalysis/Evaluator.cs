@@ -1,13 +1,14 @@
 ﻿using System;
+using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
 
 namespace Kookie.CodeAnalysis
 {
-    public sealed class Evaluator
+    internal sealed class Evaluator
     {
-        private readonly ExpressionSyntax _root;
+        private readonly BoundExpression _root;
 
-        public Evaluator(ExpressionSyntax root)
+        public Evaluator(BoundExpression root)
         {
             _root = root;
         }
@@ -17,65 +18,41 @@ namespace Kookie.CodeAnalysis
             return EvaluateExpression(_root);
         }
 
-        private int EvaluateExpression(ExpressionSyntax node)
+        private int EvaluateExpression(BoundExpression node)
         {
             // BinaryExpression
             // NumberExpression
 
-            if (node is LiteralExpressionSyntax numberExpressionSyntax)
+            if (node is BoundLiteralExpression n)
             {
-                return (int) numberExpressionSyntax.LiteralToken.Value;
+                return (int) n.Value;
             }
 
-            if (node is UnaryExpressionSyntax unaryExpressionSyntax)
+            if (node is BoundUnaryExpression u)
             {
-                var operand = EvaluateExpression(unaryExpressionSyntax.Operand);
-                
-                if (unaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.PlusToken)
+                var operand = EvaluateExpression(u.Operand);
+
+                return u.OperatorKind switch
                 {
-                    return operand;
-                }
-                else if (unaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.MinusToken)
-                {
-                    return -operand;
-                }
-                else
-                {
-                    throw new Exception($"Unexpected unary operator {unaryExpressionSyntax.OperatorToken.Kind}");
-                }
+                    BoundUnaryOperatorKind.Identity => operand,
+                    BoundUnaryOperatorKind.Negation => -operand,
+                    _ => throw new Exception($"Unexpected unary operator {u.OperatorKind}")
+                };
             }
 
-            if (node is BinaryExpressionSyntax binaryExpressionSyntax)
+            if (node is BoundBinaryExpression b)
             {
-                var left = EvaluateExpression(binaryExpressionSyntax.Left);
-                var right = EvaluateExpression(binaryExpressionSyntax.Right);
+                var left = EvaluateExpression(b.Left);
+                var right = EvaluateExpression(b.Right);
 
-                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.PlusToken)
+                return b.OperatorKind switch
                 {
-                    return left + right;
-                }
-
-                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.MinusToken)
-                {
-                    return left - right;
-                }
-
-                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.StarToken)
-                {
-                    return left * right;
-                }
-
-                if (binaryExpressionSyntax.OperatorToken.Kind == SyntaxKind.SlashToken)
-                {
-                    return left / right;
-                }
-
-                throw new Exception($"Unexpected binary operator {binaryExpressionSyntax.OperatorToken.Kind}");
-            }
-
-            if (node is ParenthesizedExpressionSyntax parenthesizedExpressionSyntax)
-            {
-                return EvaluateExpression(parenthesizedExpressionSyntax.Expression);
+                    BoundBinaryOperatorKind.Addition => left + right,
+                    BoundBinaryOperatorKind.Subtraction => left - right,
+                    BoundBinaryOperatorKind.Multiplication => left * right,
+                    BoundBinaryOperatorKind.Division => left / right,
+                    _ => throw new Exception($"Unexpected binary operator {b.OperatorKind}")
+                };
             }
             
             throw new Exception($"Unexpected node {node.Kind}");
