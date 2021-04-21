@@ -5,13 +5,13 @@ namespace Kookie.CodeAnalysis.Binding
     internal sealed class BoundBinaryExpression : BoundExpression
     {
         public BoundExpression Left { get; }
-        public BoundBinaryOperatorKind OperatorKind { get; }
+        public BoundBinaryOperator Op { get; }
         public BoundExpression Right { get; }
 
-        public BoundBinaryExpression(BoundExpression left, BoundBinaryOperatorKind operatorKind, BoundExpression right)
+        public BoundBinaryExpression(BoundExpression left, BoundBinaryOperator op, BoundExpression right)
         {
             Left = left;
-            OperatorKind = operatorKind;
+            Op = op;
             Right = right;
         }
 
