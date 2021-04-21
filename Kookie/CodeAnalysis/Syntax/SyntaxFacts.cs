@@ -47,5 +47,15 @@
 
             }
         }
+
+        public static SyntaxKind GetKeyWordKind(string text)
+        {
+            return text switch
+            {
+                "true" => SyntaxKind.TrueKeyword,
+                "false" => SyntaxKind.FalseKeyword,
+                _ => SyntaxKind.IdentifierToken
+            };
+        }
     }
 }
