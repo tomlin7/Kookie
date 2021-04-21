@@ -11,7 +11,7 @@ namespace Kookie.CodeAnalysis.Syntax
     //    | 
     //    +
     //   / \ 
-    //  1  2
+    //  1   2
     
     internal sealed class Parser
     {
@@ -121,7 +121,7 @@ namespace Kookie.CodeAnalysis.Syntax
                 case SyntaxKind.FalseKeyword or SyntaxKind.TrueKeyword:
                 {
                     var keywordToken = NextToken();
-                    var value = Current.Kind == SyntaxKind.TrueKeyword;
+                    var value = keywordToken.Kind == SyntaxKind.TrueKeyword;
                     return new LiteralExpressionSyntax(keywordToken, value);
                 }
                 default:

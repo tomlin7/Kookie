@@ -14,9 +14,14 @@ namespace Kookie.CodeAnalysis.Syntax
         }
 
         public IEnumerable<string> Diagnostics => _diagnostics;
-        private char Current()
+
+        private char Current => Peek(0);
+        private char LookAhead => Peek(1);
+        
+        private char Peek(int offset)
         {
-            return _position >= _text.Length ? '\0' : _text[_position];
+            var index = _position + offset;
+            return index >= _text.Length ? '\0' : _text[index];
         }
 
         private void Next()
@@ -35,11 +40,11 @@ namespace Kookie.CodeAnalysis.Syntax
                 return new SyntaxToken(SyntaxKind.EndOfFileToken, _position, "\0", null);
             }
 
-            if (char.IsDigit(Current()))
+            if (char.IsDigit(Current))
             {
                 var start = _position;
 
-                while (char.IsDigit(Current()))
+                while (char.IsDigit(Current))
                 {
                     Next();
                 }
@@ -53,11 +58,11 @@ namespace Kookie.CodeAnalysis.Syntax
                 return new SyntaxToken(SyntaxKind.NumberToken, start, text, value);
             }
             
-            if (char.IsWhiteSpace(Current()))
+            if (char.IsWhiteSpace(Current))
             {
                 var start = _position;
 
-                while (char.IsWhiteSpace(Current()))
+                while (char.IsWhiteSpace(Current))
                 {
                     Next();
                 }
@@ -70,11 +75,11 @@ namespace Kookie.CodeAnalysis.Syntax
             
             // true
             // false
-            if (char.IsLetter(Current()))
+            if (char.IsLetter(Current))
             {
                 var start = _position;
 
-                while (char.IsLetter(Current()))
+                while (char.IsLetter(Current))
                 {
                     Next();
                 }
@@ -85,7 +90,7 @@ namespace Kookie.CodeAnalysis.Syntax
                 return new SyntaxToken(kind, start, text, null);
             }
 
-            switch (Current())
+            switch (Current)
             {
                 case '+':
                     return new SyntaxToken(SyntaxKind.PlusToken, _position++, "+", null);
@@ -99,9 +104,23 @@ namespace Kookie.CodeAnalysis.Syntax
                     return new SyntaxToken(SyntaxKind.OpenParenthesisToken, _position++, "(", null);
                 case ')':
                     return new SyntaxToken(SyntaxKind.CloseParenthesisToken, _position++, ")", null);
+                case '!':
+                    return new SyntaxToken(SyntaxKind.BangToken, _position++, "!", null);
+                case '&':
+                    if (LookAhead == '&')
+                    {
+                        return new SyntaxToken(SyntaxKind.AmpersandAmpersandToken, _position += 2, "&&", null);
+                    }
+                    break;
+                case '|':
+                    if (LookAhead == '|')
+                    {
+                        return new SyntaxToken(SyntaxKind.PipePipeToken, _position += 2, "||", null);
+                    }
+                    break;
             }
 
-            _diagnostics.Add($"ERROR: bad character input: '{Current()}'");
+            _diagnostics.Add($"ERROR: bad character input: '{Current}'");
             return new SyntaxToken(SyntaxKind.BadToken, _position++, _text.Substring(_position - 1, 1), null);
         }
     }

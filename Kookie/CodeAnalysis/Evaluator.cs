@@ -30,27 +30,30 @@ namespace Kookie.CodeAnalysis
 
             if (node is BoundUnaryExpression u)
             {
-                var operand = (int) EvaluateExpression(u.Operand);
+                var operand = EvaluateExpression(u.Operand);
 
                 return u.OperatorKind switch
                 {
-                    BoundUnaryOperatorKind.Identity => operand,
-                    BoundUnaryOperatorKind.Negation => -operand,
+                    BoundUnaryOperatorKind.Identity => (int) operand,
+                    BoundUnaryOperatorKind.Negation => -(int) operand,
+                    BoundUnaryOperatorKind.LogicalNegation => !(bool) operand,
                     _ => throw new Exception($"Unexpected unary operator {u.OperatorKind}")
                 };
             }
 
             if (node is BoundBinaryExpression b)
             {
-                var left = (int) EvaluateExpression(b.Left);
-                var right = (int) EvaluateExpression(b.Right);
+                var left = EvaluateExpression(b.Left);
+                var right = EvaluateExpression(b.Right);
 
                 return b.OperatorKind switch
                 {
-                    BoundBinaryOperatorKind.Addition => left + right,
-                    BoundBinaryOperatorKind.Subtraction => left - right,
-                    BoundBinaryOperatorKind.Multiplication => left * right,
-                    BoundBinaryOperatorKind.Division => left / right,
+                    BoundBinaryOperatorKind.Addition => (int) left + (int) right,
+                    BoundBinaryOperatorKind.Subtraction => (int) left - (int) right,
+                    BoundBinaryOperatorKind.Multiplication => (int) left * (int) right,
+                    BoundBinaryOperatorKind.Division => (int) left / (int) right,
+                    BoundBinaryOperatorKind.LogicalAnd => (bool) left && (bool) right,
+                    BoundBinaryOperatorKind.LogicalOr => (bool) left || (bool) right,
                     _ => throw new Exception($"Unexpected binary operator {b.OperatorKind}")
                 };
             }
