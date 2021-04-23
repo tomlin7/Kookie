@@ -17,7 +17,7 @@ namespace Kookie.CodeAnalysis.Syntax
     {
         private readonly SyntaxToken[] _tokens;
         
-        private List<string> _diagnostics = new();
+        private DiagnosticBag _diagnostics = new();
         private int _position;
         
         public Parser(string text)
@@ -40,7 +40,7 @@ namespace Kookie.CodeAnalysis.Syntax
             _diagnostics.AddRange(lexer.Diagnostics);
         }
 
-        public IEnumerable<string> Diagnostics => _diagnostics;
+        public DiagnosticBag Diagnostics => _diagnostics;
 
         private SyntaxToken Peek(int offset)
         {
@@ -64,7 +64,7 @@ namespace Kookie.CodeAnalysis.Syntax
                 return NextToken();
             }
             
-            _diagnostics.Add($"ERROR: Unexpected token <{Current.Kind}>, expected <{kind}>");
+            _diagnostics.ReportUnexpectedToken(Current.Span, Current.Kind, kind);
             return new SyntaxToken(kind, Current.Position, null, null);
         }
 

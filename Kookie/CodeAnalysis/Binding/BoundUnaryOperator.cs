@@ -9,19 +9,19 @@ namespace Kookie.CodeAnalysis.Binding
         public SyntaxKind SyntaxKind { get; }
         public BoundUnaryOperatorKind Kind { get; }
         public Type OperandType { get; }
-        public Type ResultType { get; }
+        public Type Type { get; }
 
         private BoundUnaryOperator(SyntaxKind syntaxKind, BoundUnaryOperatorKind kind, Type operandType)
             : this(syntaxKind, kind, operandType, operandType)
         {
         }
 
-        private BoundUnaryOperator(SyntaxKind syntaxKind, BoundUnaryOperatorKind kind, Type operandType, Type resultType)
+        private BoundUnaryOperator(SyntaxKind syntaxKind, BoundUnaryOperatorKind kind, Type operandType, Type type)
         {
             SyntaxKind = syntaxKind;
             Kind = kind;
             OperandType = operandType;
-            ResultType = resultType;
+            Type = type;
         }
 
         private static BoundUnaryOperator[] _operators =

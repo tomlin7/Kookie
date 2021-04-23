@@ -5,11 +5,11 @@ namespace Kookie.CodeAnalysis.Syntax
 {
     public sealed class SyntaxTree
     {
-        public IEnumerable<string> Diagnostics { get; }
+        public IEnumerable<Diagnostic> Diagnostics { get; }
         public ExpressionSyntax Root { get; }
         public SyntaxToken EndOfFileToken { get; }
 
-        public SyntaxTree(IEnumerable<string> diagnostics, ExpressionSyntax root, SyntaxToken EndOfFileToken)
+        public SyntaxTree(IEnumerable<Diagnostic> diagnostics, ExpressionSyntax root, SyntaxToken EndOfFileToken)
         {
             Diagnostics = diagnostics.ToArray();
             Root = root;

@@ -6,14 +6,14 @@ namespace Kookie.CodeAnalysis.Syntax
     {
         private readonly string _text;
         private int _position;
-        private List<string> _diagnostics = new List<string>();
+        private DiagnosticBag _diagnostics = new();
         
         public Lexer(string text)
         {
             _text = text;
         }
 
-        public IEnumerable<string> Diagnostics => _diagnostics;
+        public DiagnosticBag Diagnostics => _diagnostics;
 
         private char Current => Peek(0);
         private char LookAhead => Peek(1);
@@ -40,10 +40,10 @@ namespace Kookie.CodeAnalysis.Syntax
                 return new SyntaxToken(SyntaxKind.EndOfFileToken, _position, "\0", null);
             }
 
+            var start = _position;
+
             if (char.IsDigit(Current))
             {
-                var start = _position;
-
                 while (char.IsDigit(Current))
                 {
                     Next();
@@ -53,15 +53,13 @@ namespace Kookie.CodeAnalysis.Syntax
                 var text = _text.Substring(start, length);
                 if (!int.TryParse(text, out var value))
                 {
-                    _diagnostics.Add($"The number {_text} isn't a valid Int32.");
+                    _diagnostics.ReportInvalidNumber(new TextSpan(start, length), _text, typeof(int));
                 }
                 return new SyntaxToken(SyntaxKind.NumberToken, start, text, value);
             }
             
             if (char.IsWhiteSpace(Current))
             {
-                var start = _position;
-
                 while (char.IsWhiteSpace(Current))
                 {
                     Next();
@@ -77,8 +75,6 @@ namespace Kookie.CodeAnalysis.Syntax
             // false
             if (char.IsLetter(Current))
             {
-                var start = _position;
-
                 while (char.IsLetter(Current))
                 {
                     Next();
@@ -93,34 +89,70 @@ namespace Kookie.CodeAnalysis.Syntax
             switch (Current)
             {
                 case '+':
-                    return new SyntaxToken(SyntaxKind.PlusToken, _position++, "+", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.PlusToken, start, "+", null);
+                }
                 case '-':
-                    return new SyntaxToken(SyntaxKind.MinusToken, _position++, "-", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.MinusToken, start, "-", null);
+                }
                 case '*':
-                    return new SyntaxToken(SyntaxKind.StarToken, _position++, "*", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.StarToken, start, "*", null);
+                }
                 case '/':
-                    return new SyntaxToken(SyntaxKind.SlashToken, _position++, "/", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.SlashToken, start, "/", null);
+                }
                 case '(':
-                    return new SyntaxToken(SyntaxKind.OpenParenthesisToken, _position++, "(", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.OpenParenthesisToken, start, "(", null);
+                }
                 case ')':
-                    return new SyntaxToken(SyntaxKind.CloseParenthesisToken, _position++, ")", null);
-                case '!':
-                    return new SyntaxToken(SyntaxKind.BangToken, _position++, "!", null);
+                {
+                    _position ++;
+                    return new SyntaxToken(SyntaxKind.CloseParenthesisToken, start, ")", null);
+                }
                 case '&':
                     if (LookAhead == '&')
                     {
-                        return new SyntaxToken(SyntaxKind.AmpersandAmpersandToken, _position += 2, "&&", null);
+                        _position += 2;
+                        return new SyntaxToken(SyntaxKind.AmpersandAmpersandToken, start, "&&", null);
                     }
                     break;
                 case '|':
                     if (LookAhead == '|')
                     {
-                        return new SyntaxToken(SyntaxKind.PipePipeToken, _position += 2, "||", null);
+                        _position += 2;
+                        return new SyntaxToken(SyntaxKind.PipePipeToken, start, "||", null);
                     }
                     break;
+                case '=':
+                    if (LookAhead == '=')
+                    {
+                        _position += 2;
+                        return new SyntaxToken(SyntaxKind.EqualsEqualsToken, start, "==", null);
+                    }
+                    break;
+                case '!':
+                    if (LookAhead == '=')
+                    {
+                        _position += 2;
+                        return new SyntaxToken(SyntaxKind.BangEqualsToken, start, "!=", null);
+                    }
+                    else
+                    {
+                        _position ++;
+                        return new SyntaxToken(SyntaxKind.BangToken, start, "!", null);
+                    }
             }
 
-            _diagnostics.Add($"ERROR: bad character input: '{Current}'");
+            _diagnostics.ReportBadCharacter(_position, Current);
             return new SyntaxToken(SyntaxKind.BadToken, _position++, _text.Substring(_position - 1, 1), null);
         }
     }

@@ -15,7 +15,7 @@ namespace Kookie.CodeAnalysis.Binding
             Right = right;
         }
 
-        public override BoundNodeKind Kind => BoundNodeKind.UnaryExpression;
-        public override Type Type => Left.Type;
+        public override BoundNodeKind Kind => BoundNodeKind.BinaryExpression;
+        public override Type Type => Op.Type;
     }
 }
