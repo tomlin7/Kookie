@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Kookie.CodeAnalysis;
@@ -32,6 +33,7 @@ namespace Kookie
         private static void Main()
         {
             var showTree = false;
+            var variables = new Dictionary<VariableSymbol, object>();
 
             while (true)
             {
@@ -55,7 +57,7 @@ namespace Kookie
 
                 var syntaxTree = SyntaxTree.Parse(line);
                 var compilation = new Compilation(syntaxTree);
-                var result = compilation.Evaluate();
+                var result = compilation.Evaluate(variables);
                 
                 var diagnostics = result.Diagnostics;
                 

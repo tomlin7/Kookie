@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Kookie.CodeAnalysis.Syntax;
 
 namespace Kookie.CodeAnalysis.Binding
 {
     internal sealed class Binder
     {
+        private readonly Dictionary<VariableSymbol, object> _variables;
         private readonly DiagnosticBag _diagnostics = new();
+
+        public Binder(Dictionary<VariableSymbol,object> variables)
+        {
+            _variables = variables;
+        }
 
         public DiagnosticBag Diagnostics => _diagnostics;
         
@@ -38,12 +45,33 @@ namespace Kookie.CodeAnalysis.Binding
         
         private BoundExpression BindNameExpression(NameExpressionSyntax syntax)
         {
-            throw new NotImplementedException();
+            var name = syntax.IdentifierToken.Text;
+
+            var variable = _variables.Keys.FirstOrDefault(v => v.Name == name);
+            
+            if (variable == null)
+            {
+                _diagnostics.ReportUndefinedName(syntax.IdentifierToken.Span, name);
+                return new BoundLiteralExpression(0);
+            }
+
+            return new BoundVariableExpression(variable);
         }
         
         private BoundExpression BindAssignmentExpression(AssignmentExpressionSyntax syntax)
         {
-            throw new NotImplementedException();
+            var name = syntax.IdentifierToken.Text;
+            var boundExpression = BindExpression(syntax.Expression);
+
+            var existingVariable = _variables.Keys.FirstOrDefault(v => v.Name == name);
+            if (existingVariable != null)
+            {
+                _variables.Remove(existingVariable);
+            }
+            var variable = new VariableSymbol(name, boundExpression.Type);
+            _variables[variable] = null;
+            
+            return new BoundAssignmentExpression(variable, boundExpression);
         }
 
         private BoundExpression BindUnaryExpression(UnaryExpressionSyntax syntax)

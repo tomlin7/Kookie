@@ -77,10 +77,11 @@ namespace Kookie.CodeAnalysis.Syntax
 
         private ExpressionSyntax ParseExpression()
         {
-            return ParseAssignentExpression();
+            return ParseAssignmentExpression();
         }
 
-        private ExpressionSyntax ParseAssignentExpression()
+        
+        private ExpressionSyntax ParseAssignmentExpression()
         {
             // a + b + 5
             //  
@@ -103,7 +104,7 @@ namespace Kookie.CodeAnalysis.Syntax
             {
                 var identifierToken = NextToken();
                 var operatorToken = NextToken();
-                var right = ParseAssignentExpression();
+                var right = ParseAssignmentExpression();
                 return new AssignmentExpressionSyntax(identifierToken, operatorToken, right);
             }
 
