@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kookie.Compiler", "Kookie.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kookie", "Kookie\Kookie.csproj", "{D51152DF-69C7-4632-9DDE-C6722D925AC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kookie.Tests", "Kookie.Tests\Kookie.Tests.csproj", "{1A1A0041-9A17-4112-9F55-39B2286A0F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D51152DF-69C7-4632-9DDE-C6722D925AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D51152DF-69C7-4632-9DDE-C6722D925AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D51152DF-69C7-4632-9DDE-C6722D925AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1A0041-9A17-4112-9F55-39B2286A0F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1A0041-9A17-4112-9F55-39B2286A0F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1A0041-9A17-4112-9F55-39B2286A0F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1A0041-9A17-4112-9F55-39B2286A0F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
