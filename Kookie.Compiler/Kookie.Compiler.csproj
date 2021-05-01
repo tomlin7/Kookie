@@ -7,7 +7,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Kookie</RootNamespace>
+        <RootNamespace>Kookie.Compiler</RootNamespace>
     </PropertyGroup>
 
 </Project>

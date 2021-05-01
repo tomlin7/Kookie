@@ -6,7 +6,7 @@ using Kookie.CodeAnalysis;
 using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
 
-namespace Kookie
+namespace Kookie.Compiler
 {
     // 1 + 2 * 3
     // 
