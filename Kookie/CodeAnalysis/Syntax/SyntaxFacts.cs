@@ -1,6 +1,6 @@
 ﻿namespace Kookie.CodeAnalysis.Syntax
 {
-    internal static class SyntaxFacts
+    public static class SyntaxFacts
     {
         // -1 * 3
         //
@@ -68,6 +68,43 @@
                 "false" => SyntaxKind.FalseKeyword,
                 _ => SyntaxKind.IdentifierToken
             };
+        }
+
+        public static string GetText(SyntaxKind kind)
+        {
+            switch (kind)
+            {
+                case SyntaxKind.PlusToken:
+                    return "+";
+                case SyntaxKind.MinusToken:
+                    return "-";
+                case SyntaxKind.StarToken:
+                    return "*";
+                case SyntaxKind.SlashToken:
+                    return "/";
+                case SyntaxKind.BangToken:
+                    return "!";
+                case SyntaxKind.EqualsToken:
+                    return "=";
+                case SyntaxKind.AmpersandAmpersandToken:
+                    return "&&";
+                case SyntaxKind.PipePipeToken:
+                    return "||";
+                case SyntaxKind.EqualsEqualsToken:
+                    return "==";
+                case SyntaxKind.BangEqualsToken:
+                    return "!=";
+                case SyntaxKind.OpenParenthesisToken:
+                    return "(";
+                case SyntaxKind.CloseParenthesisToken:
+                    return ")";
+                case SyntaxKind.FalseKeyword:
+                    return "false";
+                case SyntaxKind.TrueKeyword:
+                    return "true";
+                default:
+                    return null;
+            }
         }
     }
 }
