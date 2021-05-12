@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Kookie.CodeAnalysis;
 using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
@@ -37,7 +38,10 @@ namespace Kookie.Compiler
 
             while (true)
             {
-                Console.Write("> ");
+                Console.ForegroundColor =ConsoleColor.Yellow;
+                Console.Write("» ");
+                Console.ResetColor();
+                
                 var line = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(line))
                 {
