@@ -24,3 +24,8 @@
         <img alt="Azure DevOps Coverage" src="https://img.shields.io/azure-devops/coverage/billysillybilly/Kookie/5?logo=azure-artifacts&style=for-the-badge">
     </a>
 </h1>
+
+### Kookie Language Feature Suggestions
+
+If you want to suggest a new feature for the Kookie language go here:
+- [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features
