@@ -23,6 +23,9 @@
     <!--<a href="https://dev.azure.com/billysillybilly/Kookie">
         <img alt="Azure DevOps Coverage" src="https://img.shields.io/azure-devops/coverage/billysillybilly/Kookie/5?logo=azure-artifacts&style=for-the-badge">
     </a>-->
+    <a href="https://app.codecov.io/github/kookielang/Kookie/">
+        <img alt="Codecov" src="https://img.shields.io/codecov/c/github/kookielang/Kookie?style=for-the-badge">
+    </a>
 </h1>
 
 ### Kookie Language Feature Suggestions
