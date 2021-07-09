@@ -1,9 +1,9 @@
-<p align="center">
+<!--<p align="center">
     <img width="200" src="logo.jpg" alt="Kookie Logo" /><br>
-</p>
+</p>-->
 
 <h1 align="center">
-    Kookie
+    🍪 Kookie
 </h1>
 
 <h2 align="center"> 
