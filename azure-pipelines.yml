@@ -13,9 +13,14 @@ pool:
 variables:
   buildConfiguration: 'Release'
   tests: './Kookie.Tests/Kookie.Tests.csproj'
+  coverage: "./test/Kookie.Tests/coverage.opencover.xml"
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet test $(tests)
+- script: dotnet tool install --global Codecov.Tool
+  displayName: 'dotnet tool install Codecov.Tool'
+- script: dotnet test $(tests) -c Debug /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
   displayName: 'dotnet test'
+- script: codecov -f $(coverage) -t $(CODECOV_TOKEN)
+  displayName: 'codecov -f $(coverage)'
