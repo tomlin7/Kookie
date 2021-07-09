@@ -20,6 +20,6 @@ steps:
 - script: dotnet test $(tests) --collect:"XPlat Code Coverage"
   displayName: 'dotnet test'
 - script: cd Kookie.Tests/TestResults
-- script: cd */
+- script: cd */ && ls
 - script: codecov -f coverage.cobertura.xml -t $(CODECOV_TOKEN)
   displayName: 'codecov -f coverage.opencover.xml'
