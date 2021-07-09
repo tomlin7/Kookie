@@ -17,5 +17,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet test $(tests)
+- script: dotnet test $(tests) --collect:"XPlat Code Coverage"
   displayName: 'dotnet test'
+- script: cd Kookie.Tests/TestResults
+- script: for /d %%A in (*) do cd %%A
+- script: codecov -f coverage.opencover.xml -t $(CODECOV_TOKEN)
+  displayName: 'codecov -f coverage.opencover.xml'
