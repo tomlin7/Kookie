@@ -15,8 +15,6 @@ variables:
   tests: './Kookie.Tests/Kookie.Tests.csproj'
 
 steps:
-- script: dotnet tool install --global coverlet.console
-  displayName: 'dotnet tool install coverlet.console'
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 - script: dotnet test $(tests) --collect:"XPlat Code Coverage"
