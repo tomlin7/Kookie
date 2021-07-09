@@ -20,9 +20,9 @@
     <a href="https://github.com/kookielang/Kookie/issues">
         <img alt="GitHub issues" src="https://img.shields.io/github/issues/kookielang/Kookie?style=for-the-badge&logo=github">
     </a>
-    <a href="https://dev.azure.com/billysillybilly/Kookie">
+    <!--<a href="https://dev.azure.com/billysillybilly/Kookie">
         <img alt="Azure DevOps Coverage" src="https://img.shields.io/azure-devops/coverage/billysillybilly/Kookie/5?logo=azure-artifacts&style=for-the-badge">
-    </a>
+    </a>-->
 </h1>
 
 ### Kookie Language Feature Suggestions
