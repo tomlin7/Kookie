@@ -1,0 +1,29 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    env:
+      buildConfiguration: Release
+      tests: ./Kookie.Tests/Kookie.Tests.csproj
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    - name: dotnet build $buildConfiguration
+      run: dotnet build --configuration $buildConfiguration
+  
+    - name: dotnet test
+      run: dotnet test $tests
