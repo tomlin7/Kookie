@@ -21,6 +21,6 @@ steps:
   displayName: 'dotnet test'
 - script: | 
     cd Kookie.Tests/TestResults
-    cd */
+    for /d %%A in (*) do cd %%A
     codecov -f coverage.opencover.xml -t $(CODECOV_TOKEN)
   displayName: 'codecov -f coverage.opencover.xml'
