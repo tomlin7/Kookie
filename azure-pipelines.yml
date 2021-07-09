@@ -13,7 +13,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   tests: './Kookie.Tests/Kookie.Tests.csproj'
-  coverage: "./test/Kookie.Tests/coverage.opencover.xml"
+  coverage: "./Kookie.Tests/coverage.opencover.xml"
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
