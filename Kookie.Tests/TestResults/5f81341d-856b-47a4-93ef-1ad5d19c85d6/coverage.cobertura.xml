@@ -1,0 +1,2618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.7961" branch-rate="0.8020999999999999" version="1.9" timestamp="1625832495" lines-covered="531" lines-valid="667" branches-covered="150" branches-valid="187">
+  <sources>
+    <source>C:\Users\billy\Documents\projects\dotnet\Kookie\Kookie\CodeAnalysis\</source>
+  </sources>
+  <packages>
+    <package name="Kookie" line-rate="0.7961" branch-rate="0.8020999999999999" complexity="315">
+      <classes>
+        <class name="Kookie.CodeAnalysis.Compilation" filename="Compilation.cs" line-rate="0.875" branch-rate="0.5" complexity="4">
+          <methods>
+            <method name="get_Syntax" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="42" branch="False" />
+              </lines>
+            </method>
+            <method name="Evaluate" signature="(System.Collections.Generic.Dictionary`2&lt;Kookie.CodeAnalysis.VariableSymbol,System.Object&gt;)" line-rate="0.8181" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="19" hits="21" branch="False" />
+                <line number="20" hits="21" branch="False" />
+                <line number="21" hits="21" branch="False" />
+                <line number="23" hits="21" branch="False" />
+                <line number="24" hits="21" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="64" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="29" hits="21" branch="False" />
+                <line number="30" hits="21" branch="False" />
+                <line number="31" hits="21" branch="False" />
+                <line number="32" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxTree)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="21" branch="False" />
+                <line number="14" hits="21" branch="False" />
+                <line number="15" hits="21" branch="False" />
+                <line number="16" hits="21" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="42" branch="False" />
+            <line number="19" hits="21" branch="False" />
+            <line number="20" hits="21" branch="False" />
+            <line number="21" hits="21" branch="False" />
+            <line number="23" hits="21" branch="False" />
+            <line number="24" hits="21" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="64" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="29" hits="21" branch="False" />
+            <line number="30" hits="21" branch="False" />
+            <line number="31" hits="21" branch="False" />
+            <line number="32" hits="21" branch="False" />
+            <line number="13" hits="21" branch="False" />
+            <line number="14" hits="21" branch="False" />
+            <line number="15" hits="21" branch="False" />
+            <line number="16" hits="21" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Diagnostic" filename="Diagnostic.cs" line-rate="0" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Span" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Message" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ToString" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.TextSpan,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.DiagnosticBag" filename="DiagnosticBag.cs" line-rate="0.147" branch-rate="1" complexity="11">
+          <methods>
+            <method name="Report" signature="(Kookie.CodeAnalysis.TextSpan,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="GetEnumerator" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="130" branch="False" />
+              </lines>
+            </method>
+            <method name="System.Collections.IEnumerable.GetEnumerator" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="AddRange" signature="(Kookie.CodeAnalysis.DiagnosticBag)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="109" branch="False" />
+                <line number="24" hits="109" branch="False" />
+                <line number="25" hits="109" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportInvalidNumber" signature="(Kookie.CodeAnalysis.TextSpan,System.String,System.Type)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportBadCharacter" signature="(System.Int32,System.Char)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportUnexpectedToken" signature="(Kookie.CodeAnalysis.TextSpan,Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Syntax.SyntaxKind)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportUndefinedUnaryOperator" signature="(Kookie.CodeAnalysis.TextSpan,System.String,System.Type)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportUndefinedBinaryOperator" signature="(Kookie.CodeAnalysis.TextSpan,System.String,System.Type,System.Type)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ReportUndefinedName" signature="(Kookie.CodeAnalysis.TextSpan,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="1336" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="18" hits="130" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="23" hits="109" branch="False" />
+            <line number="24" hits="109" branch="False" />
+            <line number="25" hits="109" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="10" hits="1336" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.EvaluationResult" filename="EvaluationResult.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Diagnostics" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Value" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IEnumerable`1&lt;Kookie.CodeAnalysis.Diagnostic&gt;,System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="21" branch="False" />
+                <line number="12" hits="21" branch="False" />
+                <line number="13" hits="21" branch="False" />
+                <line number="14" hits="21" branch="False" />
+                <line number="15" hits="21" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="21" branch="False" />
+            <line number="9" hits="21" branch="False" />
+            <line number="11" hits="21" branch="False" />
+            <line number="12" hits="21" branch="False" />
+            <line number="13" hits="21" branch="False" />
+            <line number="14" hits="21" branch="False" />
+            <line number="15" hits="21" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Evaluator" filename="Evaluator.cs" line-rate="0.5832999999999999" branch-rate="0.6285000000000001" complexity="37">
+          <methods>
+            <method name="Evaluate" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="21" branch="False" />
+                <line number="20" hits="21" branch="False" />
+                <line number="21" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="EvaluateExpression" signature="(Kookie.CodeAnalysis.Binding.BoundExpression)" line-rate="0.5" branch-rate="0.6285000000000001" complexity="35">
+              <lines>
+                <line number="24" hits="52" branch="False" />
+                <line number="25" hits="52" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="16" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="33" branch="False" />
+                <line number="27" hits="33" branch="False" />
+                <line number="30" hits="19" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="47" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="35" hits="18" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="89" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="43" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="150" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="47" hits="0" branch="True" condition-coverage="66.66% (4/6)">
+                  <conditions>
+                    <condition number="184" type="jump" coverage="50%" />
+                    <condition number="189" type="switch" coverage="75%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="283" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="0" branch="False" />
+                <line number="56" hits="13" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="312" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="57" hits="13" branch="False" />
+                <line number="58" hits="13" branch="False" />
+                <line number="59" hits="13" branch="False" />
+                <line number="61" hits="0" branch="True" condition-coverage="63.63% (7/11)">
+                  <conditions>
+                    <condition number="363" type="jump" coverage="50%" />
+                    <condition number="368" type="switch" coverage="66.66%" />
+                  </conditions>
+                </line>
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="522" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="550" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="634" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="72" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="52" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Binding.BoundExpression,System.Collections.Generic.Dictionary`2&lt;Kookie.CodeAnalysis.VariableSymbol,System.Object&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="21" branch="False" />
+                <line number="13" hits="21" branch="False" />
+                <line number="14" hits="21" branch="False" />
+                <line number="15" hits="21" branch="False" />
+                <line number="16" hits="21" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="21" branch="False" />
+            <line number="20" hits="21" branch="False" />
+            <line number="21" hits="21" branch="False" />
+            <line number="24" hits="52" branch="False" />
+            <line number="25" hits="52" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="16" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="26" hits="33" branch="False" />
+            <line number="27" hits="33" branch="False" />
+            <line number="30" hits="19" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="47" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="35" hits="18" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="89" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="43" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="150" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="47" hits="0" branch="True" condition-coverage="66.66% (4/6)">
+              <conditions>
+                <condition number="184" type="jump" coverage="50%" />
+                <condition number="189" type="switch" coverage="75%" />
+              </conditions>
+            </line>
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="283" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="53" hits="0" branch="False" />
+            <line number="56" hits="13" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="312" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="57" hits="13" branch="False" />
+            <line number="58" hits="13" branch="False" />
+            <line number="59" hits="13" branch="False" />
+            <line number="61" hits="0" branch="True" condition-coverage="63.63% (7/11)">
+              <conditions>
+                <condition number="363" type="jump" coverage="50%" />
+                <condition number="368" type="switch" coverage="66.66%" />
+              </conditions>
+            </line>
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="522" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="550" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="634" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="72" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="52" branch="False" />
+            <line number="12" hits="21" branch="False" />
+            <line number="13" hits="21" branch="False" />
+            <line number="14" hits="21" branch="False" />
+            <line number="15" hits="21" branch="False" />
+            <line number="16" hits="21" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.TextSpan" filename="TextSpan.cs" line-rate="0" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Start" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Length" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_End" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.Int32)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.VariableSymbol" filename="TextSpan.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.AssignmentExpressionSyntax" filename="Syntax\AssignmentExpressionSyntax.cs" line-rate="0.9" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_IdentifierToken" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EqualsToken" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Expression" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken,Kookie.CodeAnalysis.Syntax.SyntaxToken,Kookie.CodeAnalysis.Syntax.ExpressionSyntax)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.AssignmentExpressionSyntax/&lt;GetChildren&gt;d__12" filename="Syntax\AssignmentExpressionSyntax.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.BinaryExpressionSyntax" filename="Syntax\BinaryExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Left" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="165" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OperatorToken" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="165" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Right" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="165" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="165" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.ExpressionSyntax,Kookie.CodeAnalysis.Syntax.SyntaxToken,Kookie.CodeAnalysis.Syntax.ExpressionSyntax)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="165" branch="False" />
+                <line number="12" hits="165" branch="False" />
+                <line number="13" hits="165" branch="False" />
+                <line number="14" hits="165" branch="False" />
+                <line number="15" hits="165" branch="False" />
+                <line number="16" hits="165" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="165" branch="False" />
+            <line number="8" hits="165" branch="False" />
+            <line number="9" hits="165" branch="False" />
+            <line number="18" hits="165" branch="False" />
+            <line number="11" hits="165" branch="False" />
+            <line number="12" hits="165" branch="False" />
+            <line number="13" hits="165" branch="False" />
+            <line number="14" hits="165" branch="False" />
+            <line number="15" hits="165" branch="False" />
+            <line number="16" hits="165" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.BinaryExpressionSyntax/&lt;GetChildren&gt;d__12" filename="Syntax\BinaryExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="152" branch="False" />
+                <line number="21" hits="152" branch="False" />
+                <line number="22" hits="152" branch="False" />
+                <line number="23" hits="152" branch="False" />
+                <line number="24" hits="152" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="152" branch="False" />
+            <line number="21" hits="152" branch="False" />
+            <line number="22" hits="152" branch="False" />
+            <line number="23" hits="152" branch="False" />
+            <line number="24" hits="152" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.Lexer" filename="Syntax\Lexer.cs" line-rate="0.9285" branch-rate="0.7608" complexity="51">
+          <methods>
+            <method name="get_Diagnostics" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="109" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Current" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="17920" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LookAhead" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="803" branch="False" />
+              </lines>
+            </method>
+            <method name="Peek" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="22" hits="18723" branch="False" />
+                <line number="23" hits="18723" branch="False" />
+                <line number="24" hits="18723" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="22" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="18723" branch="False" />
+              </lines>
+            </method>
+            <method name="Next" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="4343" branch="False" />
+                <line number="29" hits="4343" branch="False" />
+                <line number="30" hits="4343" branch="False" />
+              </lines>
+            </method>
+            <method name="Lex" signature="()" line-rate="0.9156" branch-rate="0.75" complexity="44">
+              <lines>
+                <line number="33" hits="5112" branch="False" />
+                <line number="38" hits="5112" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="25" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="1206" branch="False" />
+                <line number="40" hits="1206" branch="False" />
+                <line number="43" hits="3906" branch="False" />
+                <line number="45" hits="3906" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="72" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="383" branch="False" />
+                <line number="47" hits="1135" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="104" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="752" branch="False" />
+                <line number="49" hits="752" branch="False" />
+                <line number="50" hits="752" branch="False" />
+                <line number="52" hits="383" branch="False" />
+                <line number="53" hits="383" branch="False" />
+                <line number="54" hits="383" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="148" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="383" branch="False" />
+                <line number="61" hits="3523" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="225" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="62" hits="1281" branch="False" />
+                <line number="63" hits="2932" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="254" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="1651" branch="False" />
+                <line number="65" hits="1651" branch="False" />
+                <line number="66" hits="1651" branch="False" />
+                <line number="68" hits="1281" branch="False" />
+                <line number="69" hits="1281" branch="False" />
+                <line number="70" hits="1281" branch="False" />
+                <line number="76" hits="2242" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="313" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="77" hits="820" branch="False" />
+                <line number="78" hits="2760" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="342" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="79" hits="1940" branch="False" />
+                <line number="80" hits="1940" branch="False" />
+                <line number="81" hits="1940" branch="False" />
+                <line number="83" hits="820" branch="False" />
+                <line number="84" hits="820" branch="False" />
+                <line number="85" hits="820" branch="False" />
+                <line number="86" hits="820" branch="False" />
+                <line number="89" hits="1422" branch="True" condition-coverage="60% (12/20)">
+                  <conditions>
+                    <condition number="413" type="switch" coverage="56.25%" />
+                    <condition number="484" type="jump" coverage="100%" />
+                    <condition number="495" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="92" hits="115" branch="False" />
+                <line number="93" hits="115" branch="False" />
+                <line number="94" hits="115" branch="False" />
+                <line number="97" hits="115" branch="False" />
+                <line number="98" hits="115" branch="False" />
+                <line number="99" hits="115" branch="False" />
+                <line number="102" hits="107" branch="False" />
+                <line number="103" hits="107" branch="False" />
+                <line number="104" hits="107" branch="False" />
+                <line number="107" hits="106" branch="False" />
+                <line number="108" hits="106" branch="False" />
+                <line number="109" hits="106" branch="False" />
+                <line number="112" hits="88" branch="False" />
+                <line number="113" hits="88" branch="False" />
+                <line number="114" hits="88" branch="False" />
+                <line number="117" hits="88" branch="False" />
+                <line number="118" hits="88" branch="False" />
+                <line number="119" hits="88" branch="False" />
+                <line number="122" hits="105" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="725" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="123" hits="105" branch="False" />
+                <line number="124" hits="105" branch="False" />
+                <line number="125" hits="105" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="129" hits="105" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="781" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="130" hits="105" branch="False" />
+                <line number="131" hits="105" branch="False" />
+                <line number="132" hits="105" branch="False" />
+                <line number="134" hits="0" branch="False" />
+                <line number="136" hits="340" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="837" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="137" hits="157" branch="False" />
+                <line number="138" hits="157" branch="False" />
+                <line number="139" hits="157" branch="False" />
+                <line number="142" hits="183" branch="False" />
+                <line number="143" hits="183" branch="False" />
+                <line number="144" hits="183" branch="False" />
+                <line number="147" hits="253" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="923" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="148" hits="109" branch="False" />
+                <line number="149" hits="109" branch="False" />
+                <line number="150" hits="109" branch="False" />
+                <line number="153" hits="144" branch="False" />
+                <line number="154" hits="144" branch="False" />
+                <line number="155" hits="144" branch="False" />
+                <line number="159" hits="0" branch="False" />
+                <line number="160" hits="0" branch="False" />
+                <line number="161" hits="5112" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1206" branch="False" />
+                <line number="11" hits="1206" branch="False" />
+                <line number="12" hits="1206" branch="False" />
+                <line number="13" hits="1206" branch="False" />
+                <line number="14" hits="1206" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="109" branch="False" />
+            <line number="18" hits="17920" branch="False" />
+            <line number="19" hits="803" branch="False" />
+            <line number="22" hits="18723" branch="False" />
+            <line number="23" hits="18723" branch="False" />
+            <line number="24" hits="18723" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="22" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="25" hits="18723" branch="False" />
+            <line number="28" hits="4343" branch="False" />
+            <line number="29" hits="4343" branch="False" />
+            <line number="30" hits="4343" branch="False" />
+            <line number="33" hits="5112" branch="False" />
+            <line number="38" hits="5112" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="25" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="39" hits="1206" branch="False" />
+            <line number="40" hits="1206" branch="False" />
+            <line number="43" hits="3906" branch="False" />
+            <line number="45" hits="3906" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="72" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="46" hits="383" branch="False" />
+            <line number="47" hits="1135" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="104" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="48" hits="752" branch="False" />
+            <line number="49" hits="752" branch="False" />
+            <line number="50" hits="752" branch="False" />
+            <line number="52" hits="383" branch="False" />
+            <line number="53" hits="383" branch="False" />
+            <line number="54" hits="383" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="148" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="383" branch="False" />
+            <line number="61" hits="3523" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="225" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="62" hits="1281" branch="False" />
+            <line number="63" hits="2932" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="254" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="64" hits="1651" branch="False" />
+            <line number="65" hits="1651" branch="False" />
+            <line number="66" hits="1651" branch="False" />
+            <line number="68" hits="1281" branch="False" />
+            <line number="69" hits="1281" branch="False" />
+            <line number="70" hits="1281" branch="False" />
+            <line number="76" hits="2242" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="313" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="77" hits="820" branch="False" />
+            <line number="78" hits="2760" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="342" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="79" hits="1940" branch="False" />
+            <line number="80" hits="1940" branch="False" />
+            <line number="81" hits="1940" branch="False" />
+            <line number="83" hits="820" branch="False" />
+            <line number="84" hits="820" branch="False" />
+            <line number="85" hits="820" branch="False" />
+            <line number="86" hits="820" branch="False" />
+            <line number="89" hits="1422" branch="True" condition-coverage="60% (12/20)">
+              <conditions>
+                <condition number="413" type="switch" coverage="56.25%" />
+                <condition number="484" type="jump" coverage="100%" />
+                <condition number="495" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="92" hits="115" branch="False" />
+            <line number="93" hits="115" branch="False" />
+            <line number="94" hits="115" branch="False" />
+            <line number="97" hits="115" branch="False" />
+            <line number="98" hits="115" branch="False" />
+            <line number="99" hits="115" branch="False" />
+            <line number="102" hits="107" branch="False" />
+            <line number="103" hits="107" branch="False" />
+            <line number="104" hits="107" branch="False" />
+            <line number="107" hits="106" branch="False" />
+            <line number="108" hits="106" branch="False" />
+            <line number="109" hits="106" branch="False" />
+            <line number="112" hits="88" branch="False" />
+            <line number="113" hits="88" branch="False" />
+            <line number="114" hits="88" branch="False" />
+            <line number="117" hits="88" branch="False" />
+            <line number="118" hits="88" branch="False" />
+            <line number="119" hits="88" branch="False" />
+            <line number="122" hits="105" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="725" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="123" hits="105" branch="False" />
+            <line number="124" hits="105" branch="False" />
+            <line number="125" hits="105" branch="False" />
+            <line number="127" hits="0" branch="False" />
+            <line number="129" hits="105" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="781" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="130" hits="105" branch="False" />
+            <line number="131" hits="105" branch="False" />
+            <line number="132" hits="105" branch="False" />
+            <line number="134" hits="0" branch="False" />
+            <line number="136" hits="340" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="837" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="137" hits="157" branch="False" />
+            <line number="138" hits="157" branch="False" />
+            <line number="139" hits="157" branch="False" />
+            <line number="142" hits="183" branch="False" />
+            <line number="143" hits="183" branch="False" />
+            <line number="144" hits="183" branch="False" />
+            <line number="147" hits="253" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="923" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="148" hits="109" branch="False" />
+            <line number="149" hits="109" branch="False" />
+            <line number="150" hits="109" branch="False" />
+            <line number="153" hits="144" branch="False" />
+            <line number="154" hits="144" branch="False" />
+            <line number="155" hits="144" branch="False" />
+            <line number="159" hits="0" branch="False" />
+            <line number="160" hits="0" branch="False" />
+            <line number="161" hits="5112" branch="False" />
+            <line number="9" hits="1206" branch="False" />
+            <line number="11" hits="1206" branch="False" />
+            <line number="12" hits="1206" branch="False" />
+            <line number="13" hits="1206" branch="False" />
+            <line number="14" hits="1206" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.LiteralExpressionSyntax" filename="Syntax\LiteralExpressionSyntax.cs" line-rate="0.909" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_LiteralToken" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Value" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="33" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="33" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="21" branch="False" />
+                <line number="12" hits="21" branch="False" />
+                <line number="13" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken,System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="33" branch="False" />
+                <line number="16" hits="33" branch="False" />
+                <line number="17" hits="33" branch="False" />
+                <line number="18" hits="33" branch="False" />
+                <line number="19" hits="33" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="33" branch="False" />
+            <line number="22" hits="33" branch="False" />
+            <line number="11" hits="21" branch="False" />
+            <line number="12" hits="21" branch="False" />
+            <line number="13" hits="21" branch="False" />
+            <line number="15" hits="33" branch="False" />
+            <line number="16" hits="33" branch="False" />
+            <line number="17" hits="33" branch="False" />
+            <line number="18" hits="33" branch="False" />
+            <line number="19" hits="33" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.LiteralExpressionSyntax/&lt;GetChildren&gt;d__10" filename="Syntax\LiteralExpressionSyntax.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.NameExpressionSyntax" filename="Syntax\NameExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_IdentifierToken" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="241" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="241" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="241" branch="False" />
+                <line number="10" hits="241" branch="False" />
+                <line number="11" hits="241" branch="False" />
+                <line number="12" hits="241" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="241" branch="False" />
+            <line number="14" hits="241" branch="False" />
+            <line number="9" hits="241" branch="False" />
+            <line number="10" hits="241" branch="False" />
+            <line number="11" hits="241" branch="False" />
+            <line number="12" hits="241" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.NameExpressionSyntax/&lt;GetChildren&gt;d__6" filename="Syntax\NameExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="240" branch="False" />
+                <line number="17" hits="240" branch="False" />
+                <line number="18" hits="240" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="240" branch="False" />
+            <line number="17" hits="240" branch="False" />
+            <line number="18" hits="240" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.ParenthesizedExpressionSyntax" filename="Syntax\ParenthesizedExpressionSyntax.cs" line-rate="0.8" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_OpenParenthesisToken" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Expression" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CloseParenthesisToken" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken,Kookie.CodeAnalysis.Syntax.ExpressionSyntax,Kookie.CodeAnalysis.Syntax.SyntaxToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="2" branch="False" />
+                <line number="12" hits="2" branch="False" />
+                <line number="13" hits="2" branch="False" />
+                <line number="14" hits="2" branch="False" />
+                <line number="15" hits="2" branch="False" />
+                <line number="16" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="11" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="False" />
+            <line number="14" hits="2" branch="False" />
+            <line number="15" hits="2" branch="False" />
+            <line number="16" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.ParenthesizedExpressionSyntax/&lt;GetChildren&gt;d__12" filename="Syntax\ParenthesizedExpressionSyntax.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.Parser" filename="Syntax\Parser.cs" line-rate="0.9673" branch-rate="0.9285" complexity="33">
+          <methods>
+            <method name="get_Diagnostics" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Peek" signature="(System.Int32)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="46" hits="1940" branch="False" />
+                <line number="47" hits="1940" branch="False" />
+                <line number="48" hits="1940" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="19" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="49" hits="1940" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Current" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="51" hits="1763" branch="False" />
+              </lines>
+            </method>
+            <method name="NextToken" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="54" hits="582" branch="False" />
+                <line number="55" hits="582" branch="False" />
+                <line number="56" hits="582" branch="False" />
+                <line number="57" hits="582" branch="False" />
+                <line number="58" hits="582" branch="False" />
+              </lines>
+            </method>
+            <method name="MatchToken" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind)" line-rate="0.7142000000000001" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="61" hits="132" branch="False" />
+                <line number="62" hits="132" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="17" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="132" branch="False" />
+                <line number="64" hits="132" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="132" branch="False" />
+              </lines>
+            </method>
+            <method name="Parse" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="72" hits="109" branch="False" />
+                <line number="73" hits="109" branch="False" />
+                <line number="74" hits="109" branch="False" />
+                <line number="75" hits="109" branch="False" />
+                <line number="76" hits="109" branch="False" />
+              </lines>
+            </method>
+            <method name="ParseExpression" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="79" hits="111" branch="False" />
+                <line number="80" hits="111" branch="False" />
+                <line number="81" hits="111" branch="False" />
+              </lines>
+            </method>
+            <method name="ParseAssignmentExpression" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="85" hits="112" branch="False" />
+                <line number="102" hits="112" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="15" type="jump" coverage="100%" />
+                    <condition number="38" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="103" hits="112" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="111" hits="111" branch="False" />
+                <line number="112" hits="112" branch="False" />
+              </lines>
+            </method>
+            <method name="ParseBinaryExpression" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="115" hits="304" branch="False" />
+                <line number="117" hits="304" branch="False" />
+                <line number="118" hits="304" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="19" type="jump" coverage="100%" />
+                    <condition number="33" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="119" hits="28" branch="False" />
+                <line number="120" hits="28" branch="False" />
+                <line number="121" hits="28" branch="False" />
+                <line number="122" hits="28" branch="False" />
+                <line number="123" hits="28" branch="False" />
+                <line number="125" hits="276" branch="False" />
+                <line number="127" hits="276" branch="False" />
+                <line number="128" hits="276" branch="False" />
+                <line number="130" hits="469" branch="False" />
+                <line number="131" hits="469" branch="False" />
+                <line number="132" hits="469" branch="False" />
+                <line number="133" hits="469" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="96" type="jump" coverage="100%" />
+                    <condition number="113" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="134" hits="304" branch="False" />
+                <line number="135" hits="304" branch="False" />
+                <line number="138" hits="165" branch="False" />
+                <line number="139" hits="165" branch="False" />
+                <line number="140" hits="165" branch="False" />
+                <line number="141" hits="165" branch="False" />
+                <line number="143" hits="304" branch="False" />
+                <line number="144" hits="304" branch="False" />
+              </lines>
+            </method>
+            <method name="ParsePrimaryExpression" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="147" hits="276" branch="False" />
+                <line number="148" hits="276" branch="True" condition-coverage="100% (6/6)">
+                  <conditions>
+                    <condition number="19" type="switch" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="151" hits="2" branch="False" />
+                <line number="152" hits="2" branch="False" />
+                <line number="153" hits="2" branch="False" />
+                <line number="154" hits="2" branch="False" />
+                <line number="155" hits="2" branch="False" />
+                <line number="158" hits="12" branch="False" />
+                <line number="159" hits="12" branch="False" />
+                <line number="160" hits="12" branch="False" />
+                <line number="161" hits="12" branch="False" />
+                <line number="164" hits="241" branch="False" />
+                <line number="165" hits="241" branch="False" />
+                <line number="167" hits="21" branch="False" />
+                <line number="168" hits="21" branch="False" />
+                <line number="169" hits="21" branch="False" />
+                <line number="172" hits="276" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="20" hits="109" branch="False" />
+                <line number="23" hits="109" branch="False" />
+                <line number="24" hits="109" branch="False" />
+                <line number="25" hits="109" branch="False" />
+                <line number="26" hits="109" branch="False" />
+                <line number="29" hits="938" branch="False" />
+                <line number="30" hits="938" branch="False" />
+                <line number="32" hits="938" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="47" type="jump" coverage="100%" />
+                    <condition number="63" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="938" branch="False" />
+                <line number="34" hits="582" branch="False" />
+                <line number="35" hits="582" branch="False" />
+                <line number="36" hits="582" branch="False" />
+                <line number="37" hits="1876" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="92" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="109" branch="False" />
+                <line number="40" hits="109" branch="False" />
+                <line number="41" hits="109" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="43" hits="0" branch="False" />
+            <line number="46" hits="1940" branch="False" />
+            <line number="47" hits="1940" branch="False" />
+            <line number="48" hits="1940" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="19" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="49" hits="1940" branch="False" />
+            <line number="51" hits="1763" branch="False" />
+            <line number="54" hits="582" branch="False" />
+            <line number="55" hits="582" branch="False" />
+            <line number="56" hits="582" branch="False" />
+            <line number="57" hits="582" branch="False" />
+            <line number="58" hits="582" branch="False" />
+            <line number="61" hits="132" branch="False" />
+            <line number="62" hits="132" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="17" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="63" hits="132" branch="False" />
+            <line number="64" hits="132" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="132" branch="False" />
+            <line number="72" hits="109" branch="False" />
+            <line number="73" hits="109" branch="False" />
+            <line number="74" hits="109" branch="False" />
+            <line number="75" hits="109" branch="False" />
+            <line number="76" hits="109" branch="False" />
+            <line number="79" hits="111" branch="False" />
+            <line number="80" hits="111" branch="False" />
+            <line number="81" hits="111" branch="False" />
+            <line number="85" hits="112" branch="False" />
+            <line number="102" hits="112" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="15" type="jump" coverage="100%" />
+                <condition number="38" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="103" hits="112" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="111" hits="111" branch="False" />
+            <line number="112" hits="112" branch="False" />
+            <line number="115" hits="304" branch="False" />
+            <line number="117" hits="304" branch="False" />
+            <line number="118" hits="304" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="19" type="jump" coverage="100%" />
+                <condition number="33" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="119" hits="28" branch="False" />
+            <line number="120" hits="28" branch="False" />
+            <line number="121" hits="28" branch="False" />
+            <line number="122" hits="28" branch="False" />
+            <line number="123" hits="28" branch="False" />
+            <line number="125" hits="276" branch="False" />
+            <line number="127" hits="276" branch="False" />
+            <line number="128" hits="276" branch="False" />
+            <line number="130" hits="469" branch="False" />
+            <line number="131" hits="469" branch="False" />
+            <line number="132" hits="469" branch="False" />
+            <line number="133" hits="469" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="96" type="jump" coverage="100%" />
+                <condition number="113" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="134" hits="304" branch="False" />
+            <line number="135" hits="304" branch="False" />
+            <line number="138" hits="165" branch="False" />
+            <line number="139" hits="165" branch="False" />
+            <line number="140" hits="165" branch="False" />
+            <line number="141" hits="165" branch="False" />
+            <line number="143" hits="304" branch="False" />
+            <line number="144" hits="304" branch="False" />
+            <line number="147" hits="276" branch="False" />
+            <line number="148" hits="276" branch="True" condition-coverage="100% (6/6)">
+              <conditions>
+                <condition number="19" type="switch" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="151" hits="2" branch="False" />
+            <line number="152" hits="2" branch="False" />
+            <line number="153" hits="2" branch="False" />
+            <line number="154" hits="2" branch="False" />
+            <line number="155" hits="2" branch="False" />
+            <line number="158" hits="12" branch="False" />
+            <line number="159" hits="12" branch="False" />
+            <line number="160" hits="12" branch="False" />
+            <line number="161" hits="12" branch="False" />
+            <line number="164" hits="241" branch="False" />
+            <line number="165" hits="241" branch="False" />
+            <line number="167" hits="21" branch="False" />
+            <line number="168" hits="21" branch="False" />
+            <line number="169" hits="21" branch="False" />
+            <line number="172" hits="276" branch="False" />
+            <line number="20" hits="109" branch="False" />
+            <line number="23" hits="109" branch="False" />
+            <line number="24" hits="109" branch="False" />
+            <line number="25" hits="109" branch="False" />
+            <line number="26" hits="109" branch="False" />
+            <line number="29" hits="938" branch="False" />
+            <line number="30" hits="938" branch="False" />
+            <line number="32" hits="938" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="47" type="jump" coverage="100%" />
+                <condition number="63" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="33" hits="938" branch="False" />
+            <line number="34" hits="582" branch="False" />
+            <line number="35" hits="582" branch="False" />
+            <line number="36" hits="582" branch="False" />
+            <line number="37" hits="1876" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="92" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="39" hits="109" branch="False" />
+            <line number="40" hits="109" branch="False" />
+            <line number="41" hits="109" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxFacts" filename="Syntax\SyntaxFacts.cs" line-rate="0.85" branch-rate="0.9487000000000001" complexity="39">
+          <methods>
+            <method name="GetUnaryOperatorPrecedence" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="24" hits="353" branch="False" />
+                <line number="25" hits="353" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                    <condition number="15" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="55" branch="False" />
+                <line number="33" hits="298" branch="False" />
+                <line number="36" hits="353" branch="False" />
+              </lines>
+            </method>
+            <method name="GetBinaryOperatorPrecedence" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind)" line-rate="1" branch-rate="1" complexity="11">
+              <lines>
+                <line number="39" hits="921" branch="False" />
+                <line number="40" hits="921" branch="True" condition-coverage="100% (11/11)">
+                  <conditions>
+                    <condition number="8" type="switch" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="113" branch="False" />
+                <line number="48" hits="116" branch="False" />
+                <line number="52" hits="126" branch="False" />
+                <line number="55" hits="60" branch="False" />
+                <line number="58" hits="61" branch="False" />
+                <line number="61" hits="445" branch="False" />
+                <line number="64" hits="921" branch="False" />
+              </lines>
+            </method>
+            <method name="GetKeyWordKind" signature="(System.String)" line-rate="0.25" branch-rate="0.75" complexity="8">
+              <lines>
+                <line number="67" hits="820" branch="False" />
+                <line number="68" hits="0" branch="True" condition-coverage="83.33% (5/6)">
+                  <conditions>
+                    <condition number="2" type="jump" coverage="50%" />
+                    <condition number="16" type="jump" coverage="100%" />
+                    <condition number="29" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="49" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="73" hits="0" branch="False" />
+                <line number="74" hits="820" branch="False" />
+              </lines>
+            </method>
+            <method name="GetText" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind)" line-rate="1" branch-rate="1" complexity="16">
+              <lines>
+                <line number="101" hits="201" branch="False" />
+                <line number="102" hits="201" branch="True" condition-coverage="100% (16/16)">
+                  <conditions>
+                    <condition number="8" type="switch" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="105" hits="28" branch="False" />
+                <line number="107" hits="28" branch="False" />
+                <line number="109" hits="20" branch="False" />
+                <line number="111" hits="20" branch="False" />
+                <line number="113" hits="9" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="117" hits="20" branch="False" />
+                <line number="119" hits="20" branch="False" />
+                <line number="121" hits="20" branch="False" />
+                <line number="123" hits="20" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+                <line number="129" hits="1" branch="False" />
+                <line number="131" hits="1" branch="False" />
+                <line number="133" hits="11" branch="False" />
+                <line number="135" hits="201" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="353" branch="False" />
+            <line number="25" hits="353" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+                <condition number="15" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="55" branch="False" />
+            <line number="33" hits="298" branch="False" />
+            <line number="36" hits="353" branch="False" />
+            <line number="39" hits="921" branch="False" />
+            <line number="40" hits="921" branch="True" condition-coverage="100% (11/11)">
+              <conditions>
+                <condition number="8" type="switch" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="113" branch="False" />
+            <line number="48" hits="116" branch="False" />
+            <line number="52" hits="126" branch="False" />
+            <line number="55" hits="60" branch="False" />
+            <line number="58" hits="61" branch="False" />
+            <line number="61" hits="445" branch="False" />
+            <line number="64" hits="921" branch="False" />
+            <line number="67" hits="820" branch="False" />
+            <line number="68" hits="0" branch="True" condition-coverage="83.33% (5/6)">
+              <conditions>
+                <condition number="2" type="jump" coverage="50%" />
+                <condition number="16" type="jump" coverage="100%" />
+                <condition number="29" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="49" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="73" hits="0" branch="False" />
+            <line number="74" hits="820" branch="False" />
+            <line number="101" hits="201" branch="False" />
+            <line number="102" hits="201" branch="True" condition-coverage="100% (16/16)">
+              <conditions>
+                <condition number="8" type="switch" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="105" hits="28" branch="False" />
+            <line number="107" hits="28" branch="False" />
+            <line number="109" hits="20" branch="False" />
+            <line number="111" hits="20" branch="False" />
+            <line number="113" hits="9" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="117" hits="20" branch="False" />
+            <line number="119" hits="20" branch="False" />
+            <line number="121" hits="20" branch="False" />
+            <line number="123" hits="20" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+            <line number="129" hits="1" branch="False" />
+            <line number="131" hits="1" branch="False" />
+            <line number="133" hits="11" branch="False" />
+            <line number="135" hits="201" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxFacts/&lt;GetUnaryOperatorKinds&gt;d__3" filename="Syntax\SyntaxFacts.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="53" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="177" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="80" hits="25" branch="False" />
+                <line number="81" hits="25" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="116" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="82" hits="3" branch="False" />
+                <line number="83" hits="3" branch="False" />
+                <line number="84" hits="3" branch="False" />
+                <line number="85" hits="25" branch="False" />
+                <line number="86" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="53" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="177" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="80" hits="25" branch="False" />
+            <line number="81" hits="25" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="116" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="82" hits="3" branch="False" />
+            <line number="83" hits="3" branch="False" />
+            <line number="84" hits="3" branch="False" />
+            <line number="85" hits="25" branch="False" />
+            <line number="86" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxFacts/&lt;GetBinaryOperatorKinds&gt;d__4" filename="Syntax\SyntaxFacts.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="89" hits="12" branch="False" />
+                <line number="90" hits="12" branch="False" />
+                <line number="91" hits="636" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="177" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="92" hits="300" branch="False" />
+                <line number="93" hits="300" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="116" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="94" hits="96" branch="False" />
+                <line number="95" hits="96" branch="False" />
+                <line number="96" hits="96" branch="False" />
+                <line number="97" hits="300" branch="False" />
+                <line number="98" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="89" hits="12" branch="False" />
+            <line number="90" hits="12" branch="False" />
+            <line number="91" hits="636" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="177" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="92" hits="300" branch="False" />
+            <line number="93" hits="300" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="116" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="94" hits="96" branch="False" />
+            <line number="95" hits="96" branch="False" />
+            <line number="96" hits="96" branch="False" />
+            <line number="97" hits="300" branch="False" />
+            <line number="98" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxToken" filename="Syntax\SyntaxToken.cs" line-rate="0.8665999999999999" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="11512" branch="False" />
+              </lines>
+            </method>
+            <method name="GetChildren" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="416" branch="False" />
+                <line number="11" hits="416" branch="False" />
+                <line number="12" hits="416" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Position" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Text" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="3495" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Value" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Span" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,System.Int32,System.String,System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="5112" branch="False" />
+                <line number="20" hits="5112" branch="False" />
+                <line number="21" hits="5112" branch="False" />
+                <line number="22" hits="5112" branch="False" />
+                <line number="23" hits="5112" branch="False" />
+                <line number="24" hits="5112" branch="False" />
+                <line number="25" hits="5112" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="11512" branch="False" />
+            <line number="10" hits="416" branch="False" />
+            <line number="11" hits="416" branch="False" />
+            <line number="12" hits="416" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="3495" branch="False" />
+            <line number="16" hits="21" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="19" hits="5112" branch="False" />
+            <line number="20" hits="5112" branch="False" />
+            <line number="21" hits="5112" branch="False" />
+            <line number="22" hits="5112" branch="False" />
+            <line number="23" hits="5112" branch="False" />
+            <line number="24" hits="5112" branch="False" />
+            <line number="25" hits="5112" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxTree" filename="Syntax\SyntaxTree.cs" line-rate="0.9229999999999999" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Diagnostics" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Root" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="109" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EndOfFileToken" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Parse" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="109" branch="False" />
+                <line number="21" hits="109" branch="False" />
+                <line number="22" hits="109" branch="False" />
+                <line number="23" hits="109" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IEnumerable`1&lt;Kookie.CodeAnalysis.Diagnostic&gt;,Kookie.CodeAnalysis.Syntax.ExpressionSyntax,Kookie.CodeAnalysis.Syntax.SyntaxToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="109" branch="False" />
+                <line number="13" hits="109" branch="False" />
+                <line number="14" hits="109" branch="False" />
+                <line number="15" hits="109" branch="False" />
+                <line number="16" hits="109" branch="False" />
+                <line number="17" hits="109" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="21" branch="False" />
+            <line number="9" hits="109" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="20" hits="109" branch="False" />
+            <line number="21" hits="109" branch="False" />
+            <line number="22" hits="109" branch="False" />
+            <line number="23" hits="109" branch="False" />
+            <line number="12" hits="109" branch="False" />
+            <line number="13" hits="109" branch="False" />
+            <line number="14" hits="109" branch="False" />
+            <line number="15" hits="109" branch="False" />
+            <line number="16" hits="109" branch="False" />
+            <line number="17" hits="109" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.SyntaxTree/&lt;ParseTokens&gt;d__11" filename="Syntax\SyntaxTree.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="26" hits="1097" branch="False" />
+                <line number="27" hits="1097" branch="False" />
+                <line number="28" hits="4174" branch="False" />
+                <line number="29" hits="4174" branch="False" />
+                <line number="30" hits="4174" branch="False" />
+                <line number="31" hits="4174" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="85" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="1097" branch="False" />
+                <line number="33" hits="1097" branch="False" />
+                <line number="36" hits="3077" branch="False" />
+                <line number="37" hits="3077" branch="False" />
+                <line number="38" hits="1097" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1097" branch="False" />
+            <line number="27" hits="1097" branch="False" />
+            <line number="28" hits="4174" branch="False" />
+            <line number="29" hits="4174" branch="False" />
+            <line number="30" hits="4174" branch="False" />
+            <line number="31" hits="4174" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="85" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="32" hits="1097" branch="False" />
+            <line number="33" hits="1097" branch="False" />
+            <line number="36" hits="3077" branch="False" />
+            <line number="37" hits="3077" branch="False" />
+            <line number="38" hits="1097" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.UnaryExpressionSyntax" filename="Syntax\UnaryExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_OperatorToken" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Operand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxToken,Kookie.CodeAnalysis.Syntax.ExpressionSyntax)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="28" branch="False" />
+                <line number="11" hits="28" branch="False" />
+                <line number="12" hits="28" branch="False" />
+                <line number="13" hits="28" branch="False" />
+                <line number="14" hits="28" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="28" branch="False" />
+            <line number="8" hits="28" branch="False" />
+            <line number="16" hits="28" branch="False" />
+            <line number="10" hits="28" branch="False" />
+            <line number="11" hits="28" branch="False" />
+            <line number="12" hits="28" branch="False" />
+            <line number="13" hits="28" branch="False" />
+            <line number="14" hits="28" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Syntax.UnaryExpressionSyntax/&lt;GetChildren&gt;d__9" filename="Syntax\UnaryExpressionSyntax.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="24" branch="False" />
+                <line number="19" hits="24" branch="False" />
+                <line number="20" hits="24" branch="False" />
+                <line number="21" hits="24" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="24" branch="False" />
+            <line number="19" hits="24" branch="False" />
+            <line number="20" hits="24" branch="False" />
+            <line number="21" hits="24" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.Binder" filename="Binding\Binder.cs" line-rate="0.6363" branch-rate="0.619" complexity="24">
+          <methods>
+            <method name="get_Diagnostics" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="BindExpression" signature="(Kookie.CodeAnalysis.Syntax.ExpressionSyntax)" line-rate="0.15380000000000002" branch-rate="0.7272" complexity="11">
+              <lines>
+                <line number="21" hits="54" branch="False" />
+                <line number="22" hits="0" branch="True" condition-coverage="77.77% (7/9)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="50%" />
+                    <condition number="16" type="switch" coverage="85.71%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="165" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="54" branch="False" />
+              </lines>
+            </method>
+            <method name="BindParenthesizedExpression" signature="(Kookie.CodeAnalysis.Syntax.ParenthesizedExpressionSyntax)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="BindLiteralExpression" signature="(Kookie.CodeAnalysis.Syntax.LiteralExpressionSyntax)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="41" hits="33" branch="False" />
+                <line number="42" hits="33" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="33" branch="False" />
+                <line number="44" hits="33" branch="False" />
+              </lines>
+            </method>
+            <method name="BindNameExpression" signature="(Kookie.CodeAnalysis.Syntax.NameExpressionSyntax)" line-rate="0.6666" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="52" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="59" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="BindAssignmentExpression" signature="(Kookie.CodeAnalysis.Syntax.AssignmentExpressionSyntax)" line-rate="0.6666" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="62" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="74" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="BindUnaryExpression" signature="(Kookie.CodeAnalysis.Syntax.UnaryExpressionSyntax)" line-rate="0.6666" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="78" hits="4" branch="False" />
+                <line number="79" hits="4" branch="False" />
+                <line number="80" hits="4" branch="False" />
+                <line number="82" hits="4" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="43" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="83" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="87" hits="4" branch="False" />
+                <line number="88" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="BindBinaryExpression" signature="(Kookie.CodeAnalysis.Syntax.BinaryExpressionSyntax)" line-rate="0.7" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="91" hits="13" branch="False" />
+                <line number="92" hits="13" branch="False" />
+                <line number="93" hits="13" branch="False" />
+                <line number="94" hits="13" branch="False" />
+                <line number="96" hits="13" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="62" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="97" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+                <line number="102" hits="13" branch="False" />
+                <line number="103" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.Dictionary`2&lt;Kookie.CodeAnalysis.VariableSymbol,System.Object&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="21" branch="False" />
+                <line number="13" hits="21" branch="False" />
+                <line number="14" hits="21" branch="False" />
+                <line number="15" hits="21" branch="False" />
+                <line number="16" hits="21" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="21" branch="False" />
+            <line number="21" hits="54" branch="False" />
+            <line number="22" hits="0" branch="True" condition-coverage="77.77% (7/9)">
+              <conditions>
+                <condition number="9" type="jump" coverage="50%" />
+                <condition number="16" type="switch" coverage="85.71%" />
+              </conditions>
+            </line>
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="165" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="54" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="41" hits="33" branch="False" />
+            <line number="42" hits="33" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="8" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="43" hits="33" branch="False" />
+            <line number="44" hits="33" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="52" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="59" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="74" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="78" hits="4" branch="False" />
+            <line number="79" hits="4" branch="False" />
+            <line number="80" hits="4" branch="False" />
+            <line number="82" hits="4" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="43" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="83" hits="0" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="87" hits="4" branch="False" />
+            <line number="88" hits="4" branch="False" />
+            <line number="91" hits="13" branch="False" />
+            <line number="92" hits="13" branch="False" />
+            <line number="93" hits="13" branch="False" />
+            <line number="94" hits="13" branch="False" />
+            <line number="96" hits="13" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="62" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="97" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="102" hits="13" branch="False" />
+            <line number="103" hits="13" branch="False" />
+            <line number="11" hits="21" branch="False" />
+            <line number="13" hits="21" branch="False" />
+            <line number="14" hits="21" branch="False" />
+            <line number="15" hits="21" branch="False" />
+            <line number="16" hits="21" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundAssignmentExpression" filename="Binding\BoundAssignmentExpression.cs" line-rate="0.8887999999999999" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Variable" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Expression" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.VariableSymbol,Kookie.CodeAnalysis.Binding.BoundExpression)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="1" branch="False" />
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="10" hits="1" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundBinaryExpression" filename="Binding\BoundBinaryExpression.cs" line-rate="0.8181" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Left" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Op" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Right" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Binding.BoundExpression,Kookie.CodeAnalysis.Binding.BoundBinaryOperator,Kookie.CodeAnalysis.Binding.BoundExpression)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="13" branch="False" />
+                <line number="12" hits="13" branch="False" />
+                <line number="13" hits="13" branch="False" />
+                <line number="14" hits="13" branch="False" />
+                <line number="15" hits="13" branch="False" />
+                <line number="16" hits="13" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="13" branch="False" />
+            <line number="8" hits="13" branch="False" />
+            <line number="9" hits="13" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="11" hits="13" branch="False" />
+            <line number="12" hits="13" branch="False" />
+            <line number="13" hits="13" branch="False" />
+            <line number="14" hits="13" branch="False" />
+            <line number="15" hits="13" branch="False" />
+            <line number="16" hits="13" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundBinaryOperator" filename="Binding\BoundBinaryOperator.cs" line-rate="0.9729000000000001" branch-rate="1" complexity="13">
+          <methods>
+            <method name="get_SyntaxKind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="73" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_LeftType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_RightType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Bind" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,System.Type,System.Type)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="51" hits="13" branch="False" />
+                <line number="52" hits="86" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                    <condition number="31" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Binding.BoundBinaryOperatorKind,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="8" branch="False" />
+                <line number="17" hits="8" branch="False" />
+                <line number="18" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Binding.BoundBinaryOperatorKind,System.Type,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="2" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Binding.BoundBinaryOperatorKind,System.Type,System.Type,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="10" branch="False" />
+                <line number="26" hits="10" branch="False" />
+                <line number="27" hits="10" branch="False" />
+                <line number="28" hits="10" branch="False" />
+                <line number="29" hits="10" branch="False" />
+                <line number="30" hits="10" branch="False" />
+                <line number="31" hits="10" branch="False" />
+                <line number="32" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="73" branch="False" />
+            <line number="10" hits="13" branch="False" />
+            <line number="11" hits="17" branch="False" />
+            <line number="12" hits="13" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="51" hits="13" branch="False" />
+            <line number="52" hits="86" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+                <condition number="31" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="65" hits="13" branch="False" />
+            <line number="16" hits="8" branch="False" />
+            <line number="17" hits="8" branch="False" />
+            <line number="18" hits="8" branch="False" />
+            <line number="21" hits="2" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="2" branch="False" />
+            <line number="25" hits="10" branch="False" />
+            <line number="26" hits="10" branch="False" />
+            <line number="27" hits="10" branch="False" />
+            <line number="28" hits="10" branch="False" />
+            <line number="29" hits="10" branch="False" />
+            <line number="30" hits="10" branch="False" />
+            <line number="31" hits="10" branch="False" />
+            <line number="32" hits="10" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundLiteralExpression" filename="Binding\BoundLiteralExpression.cs" line-rate="0.8571" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Value" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="63" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="30" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="33" branch="False" />
+                <line number="10" hits="33" branch="False" />
+                <line number="11" hits="33" branch="False" />
+                <line number="12" hits="33" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="63" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="30" branch="False" />
+            <line number="9" hits="33" branch="False" />
+            <line number="10" hits="33" branch="False" />
+            <line number="11" hits="33" branch="False" />
+            <line number="12" hits="33" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundUnaryExpression" filename="Binding\BoundUnaryExpression.cs" line-rate="0.7777" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Op" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Operand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Binding.BoundUnaryOperator,Kookie.CodeAnalysis.Binding.BoundExpression)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="4" branch="False" />
+                <line number="11" hits="4" branch="False" />
+                <line number="12" hits="4" branch="False" />
+                <line number="13" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="4" branch="False" />
+            <line number="8" hits="4" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="4" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundUnaryOperator" filename="Binding\BoundUnaryOperator.cs" line-rate="0.9582999999999999" branch-rate="1" complexity="9">
+          <methods>
+            <method name="get_SyntaxKind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OperandType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Bind" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,System.Type)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="36" hits="4" branch="False" />
+                <line number="37" hits="11" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Binding.BoundUnaryOperatorKind,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="3" branch="False" />
+                <line number="16" hits="3" branch="False" />
+                <line number="17" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.Syntax.SyntaxKind,Kookie.CodeAnalysis.Binding.BoundUnaryOperatorKind,System.Type,System.Type)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="3" branch="False" />
+                <line number="23" hits="3" branch="False" />
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="7" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="36" hits="4" branch="False" />
+            <line number="37" hits="11" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="50" hits="4" branch="False" />
+            <line number="15" hits="3" branch="False" />
+            <line number="16" hits="3" branch="False" />
+            <line number="17" hits="3" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="3" branch="False" />
+            <line number="23" hits="3" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Kookie.CodeAnalysis.Binding.BoundVariableExpression" filename="Binding\BoundVariableExpression.cs" line-rate="0.75" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Variable" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Kind" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Kookie.CodeAnalysis.VariableSymbol)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="2" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

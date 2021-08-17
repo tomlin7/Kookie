@@ -143,7 +143,6 @@ namespace Kookie.CodeAnalysis.Syntax
                         _position++;
                         return new SyntaxToken(SyntaxKind.EqualsToken, start, "=", null);
                     }
-                    break;
                 case '!':
                     if (LookAhead == '=')
                     {
