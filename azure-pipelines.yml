@@ -17,10 +17,5 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet test $(tests) --logger "xunit;LogFileName=test_results.xml"
+- script: dotnet test $(tests)
   displayName: 'dotnet test'
-- task: PublishTestResults@2
-  displayName: 'publish test results to azure pipelines'
-  inputs:
-    testResultsFormat: 'xUnit'
-    testResultsFiles: '**/test_results.xml'
