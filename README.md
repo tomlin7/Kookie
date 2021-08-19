@@ -31,4 +31,4 @@
 ### Kookie Language Feature Suggestions
 
 If you want to suggest a new feature for the Kookie language go here:
-- [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features
+- [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features.
