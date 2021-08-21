@@ -22,19 +22,16 @@ namespace Kookie.CodeAnalysis
 
         private object EvaluateExpression(BoundExpression node)
         {
-            // BinaryExpression
-            // NumberExpression
-
+            if (node is BoundLiteralExpression n)
+            {
+                return n.Value;
+            }
+            
             if (node is BoundVariableExpression v)
             {
                 return _variables[v.Variable];
             }
             
-            if (node is BoundLiteralExpression n)
-            {
-                return n.Value;
-            }
-
             if (node is BoundAssignmentExpression a)
             {
                 var value = EvaluateExpression(a.Expression);
