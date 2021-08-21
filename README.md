@@ -36,4 +36,12 @@ Kookie is a modern, tasty programming language made for developers.
 ## Kookie Language Feature Suggestions
 
 If you want to suggest a new feature for the Kookie language go here:
-- [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features.
+- [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features
+
+## Contributing
+
+If you are interested in fixing issues and contributing directly to the code base, a great way to get started is to ask some questions on [GitHub Discussions](https://github.com/kookielang/Kookie/discussions)! Then check out our [contributing guide](https://github.com/kookielang/Kookie/blob/main/CONTRIBUTING.md) which covers the following:
+- Coding styles and guidelines
+- Submitting pull requests
+- Finding a bug to fix in the Compiler
+- Finding a feature to implement in the Compiler
