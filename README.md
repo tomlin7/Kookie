@@ -2,8 +2,12 @@
     <img width="200" src="logo.jpg" alt="Kookie Logo" /><br>
 </p>-->
 
+<p align="center">
+    <img width="400" src="logo.svg" alt="Kookie Logo" /><br>
+</p>
+
 <h1 align="center">
-    🍪 Kookie
+    Kookie
 </h1>
 
 <h2 align="center"> 
@@ -20,15 +24,16 @@
     <a href="https://github.com/kookielang/Kookie/issues">
         <img alt="GitHub issues" src="https://img.shields.io/github/issues/kookielang/Kookie?style=for-the-badge&logo=github">
     </a>
-    <!--<a href="https://dev.azure.com/billysillybilly/Kookie">
-        <img alt="Azure DevOps Coverage" src="https://img.shields.io/azure-devops/coverage/billysillybilly/Kookie/5?logo=azure-artifacts&style=for-the-badge">
-    </a>-->
     <a href="https://app.codecov.io/github/kookielang/Kookie/">
         <img alt="Codecov" src="https://img.shields.io/codecov/c/github/kookielang/Kookie?style=for-the-badge">
     </a>
 </h1>
 
-### Kookie Language Feature Suggestions
+## The Kookie Programming Language
+
+Kookie is a modern, tasty programming language made for developers.
+
+## Kookie Language Feature Suggestions
 
 If you want to suggest a new feature for the Kookie language go here:
 - [kookielang/kookielang](https://github.com/kookielang/kookielang) for language specific issues and features
