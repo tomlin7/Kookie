@@ -45,3 +45,9 @@ If you are interested in fixing issues and contributing directly to the code bas
 - Submitting pull requests
 - Finding a bug to fix in the Compiler
 - Finding a feature to implement in the Compiler
+
+## Community
+The Kookie community can be found on [GitHub Discussions](https://github.com/kookielang/Kookie/discussions), where you can ask questions, voice ideas, and share your projects.
+
+To chat with other community members, you can join the [Discord](https://discord.gg/DUzg87E).
+Our [Code of Conduct](https://github.com/kookielang/Kookie/blob/main/CODE-OF-CONDUCT.md) applies to all Roslyn community channels.
