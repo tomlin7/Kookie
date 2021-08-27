@@ -11,7 +11,7 @@
 </h1>
 
 <h2 align="center"> 
-    Static, Subtle, Refined
+    Crispy, Refined, Static Language
 </h2>
 
 <h1 align="center"> 
