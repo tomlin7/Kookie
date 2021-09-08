@@ -1,7 +1,3 @@
-<!--<p align="center">
-    <img width="200" src="logo.jpg" alt="Kookie Logo" /><br>
-</p>-->
-
 <p align="center">
     <img width="400" src="logo.svg" alt="Kookie Logo" /><br>
 </p>
@@ -40,7 +36,7 @@ If you want to suggest a new feature for the Kookie language go here:
 
 ## Contributing
 
-If you are interested in fixing issues and contributing directly to the code base, a great way to get started is to ask some questions on [GitHub Discussions](https://github.com/kookielang/Kookie/discussions)! Then check out our [contributing guide](https://github.com/kookielang/Kookie/blob/main/CONTRIBUTING.md) which covers the following:
+If you are interested in fixing issues and contributing directly to the code base, a great way to get started is to ask some questions on [GitHub Discussions](https://github.com/kookielang/Kookie/discussions)! Then check out our [contributing guide](https://github.com/kookielang/Kookie/blob/master/CONTRIBUTING.md) which covers the following:
 - Coding styles and guidelines
 - Submitting pull requests
 - Finding a bug to fix in the Compiler
@@ -50,4 +46,4 @@ If you are interested in fixing issues and contributing directly to the code bas
 The Kookie community can be found on [GitHub Discussions](https://github.com/kookielang/Kookie/discussions), where you can ask questions, voice ideas, and share your projects.
 
 To chat with other community members, you can join the [Discord](https://discord.gg/DUzg87E).
-Our [Code of Conduct](https://github.com/kookielang/Kookie/blob/main/CODE-OF-CONDUCT.md) applies to all Roslyn community channels.
+Our [Code of Conduct](https://github.com/kookielang/Kookie/blob/master/CODE-OF-CONDUCT.md) applies to all Roslyn community channels.
