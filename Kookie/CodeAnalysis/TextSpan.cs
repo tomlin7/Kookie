@@ -14,6 +14,12 @@ namespace Kookie.CodeAnalysis
         }
 
         public int End => Start + Length;
+
+        public static TextSpan FromBounds(int start, int end)
+        {
+            var length = end - start;
+            return new TextSpan(start, length);
+        }
     }
 
     public sealed class VariableSymbol
