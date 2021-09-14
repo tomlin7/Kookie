@@ -5,7 +5,7 @@ namespace Kookie.CodeAnalysis.Syntax
     internal sealed class Lexer
     {
         private readonly DiagnosticBag _diagnostics = new();
-        private readonly string _text;
+        private readonly SourceText _text;
 
         private int _position;
         
@@ -13,7 +13,7 @@ namespace Kookie.CodeAnalysis.Syntax
         private SyntaxKind _kind;
         private object _value;
 
-        public Lexer(string text)
+        public Lexer(SourceText text)
         {
             _text = text;
         }
@@ -156,7 +156,7 @@ namespace Kookie.CodeAnalysis.Syntax
             var length = _position - _start;
             var text = SyntaxFacts.GetText(_kind);
             if (text== null)
-                text = _text.Substring(_start, length);
+                text = _text.ToString(_start, length);
 
             return new SyntaxToken(_kind, _start, text, _value);
         }
@@ -175,10 +175,10 @@ namespace Kookie.CodeAnalysis.Syntax
                 _position++;
 
             var length = _position - _start;
-            var text = _text.Substring(_start, length);
+            var text = _text.ToString(_start, length);
             if (!int.TryParse(text, out var value))
             {
-                _diagnostics.ReportInvalidNumber(new TextSpan(_start, length), _text, typeof(int));
+                _diagnostics.ReportInvalidNumber(new TextSpan(_start, length), text, typeof(int));
             }
 
             _value = value;
@@ -191,7 +191,7 @@ namespace Kookie.CodeAnalysis.Syntax
                 _position++;
 
             var length = _position - _start;
-            var text = _text.Substring(_start, length);
+            var text = _text.ToString(_start, length);
             _kind = SyntaxFacts.GetKeyWordKind(text);
         }
     }
