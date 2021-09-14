@@ -4,4 +4,8 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="System.Collections.Immutable" Version="6.0.0-preview.7.21377.19" />
+    </ItemGroup>
+
 </Project>
