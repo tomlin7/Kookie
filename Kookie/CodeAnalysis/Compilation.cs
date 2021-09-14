@@ -4,6 +4,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
+using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.CodeAnalysis
 {

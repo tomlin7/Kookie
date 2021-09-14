@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.CodeAnalysis.Syntax
 {

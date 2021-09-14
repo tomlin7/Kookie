@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Kookie.CodeAnalysis.Binding;
+using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.CodeAnalysis
 {

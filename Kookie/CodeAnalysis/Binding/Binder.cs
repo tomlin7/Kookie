@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Kookie.CodeAnalysis.Syntax;
+using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.CodeAnalysis.Binding
 {

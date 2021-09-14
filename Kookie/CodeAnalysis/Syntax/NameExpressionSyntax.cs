@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Kookie.CodeAnalysis.Syntax
+﻿namespace Kookie.CodeAnalysis.Syntax
 {
     public sealed class NameExpressionSyntax : ExpressionSyntax
     {

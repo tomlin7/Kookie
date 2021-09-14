@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Kookie.CodeAnalysis;
 using Kookie.CodeAnalysis.Syntax;
+using Kookie.CodeAnalysis.Text;
 using Xunit;
 
 namespace Kookie.Tests.CodeAnalysis

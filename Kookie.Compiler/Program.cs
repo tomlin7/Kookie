@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using Kookie.CodeAnalysis;
 using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
+using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.Compiler
 {

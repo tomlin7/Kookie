@@ -1,4 +1,6 @@
-﻿namespace Kookie.CodeAnalysis.Syntax
+﻿using Kookie.CodeAnalysis.Text;
+
+namespace Kookie.CodeAnalysis.Syntax
 {
     public sealed class SyntaxToken : SyntaxNode
     {

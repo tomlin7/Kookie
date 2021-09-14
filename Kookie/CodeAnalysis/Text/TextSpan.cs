@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kookie.CodeAnalysis
+namespace Kookie.CodeAnalysis.Text
 {
     public struct TextSpan
     {
