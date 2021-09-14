@@ -32,7 +32,7 @@ namespace Kookie.CodeAnalysis.Text
                     return index;
                 
                 if (start > position) upper = index - 1;
-                else lower = index = 1;
+                else lower = index + 1;
             }
             
             return lower - 1;

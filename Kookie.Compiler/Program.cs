@@ -1,34 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Text;
 using Kookie.CodeAnalysis;
-using Kookie.CodeAnalysis.Binding;
 using Kookie.CodeAnalysis.Syntax;
 using Kookie.CodeAnalysis.Text;
 
 namespace Kookie.Compiler
 {
-    // 1 + 2 * 3
-    // 
-    // 
-    // 
-    //     +
-    //    / \
-    //   1   *
-    //      / \
-    //     2   3
-    
-    // 1 + 2 + 3
-    //
-    //
-    //
-    //       +
-    //      / \
-    //     +   3
-    //    / \
-    //   1   2
 
     internal static class Program
     {
@@ -36,31 +15,47 @@ namespace Kookie.Compiler
         {
             var showTree = false;
             var variables = new Dictionary<VariableSymbol, object>();
+            var textBuilder = new StringBuilder();
 
             while (true)
             {
-                Console.ForegroundColor =ConsoleColor.Yellow;
-                Console.Write("» ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                if (textBuilder.Length == 0)
+                    Console.Write("» ");
+                else
+                    Console.Write("· ");
                 Console.ResetColor();
                 
-                var line = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(line))
-                {
-                    return;
-                }
+                var input = Console.ReadLine();
+                var isBlank = string.IsNullOrWhiteSpace(input);
 
-                switch (line)
+                if(textBuilder.Length == 0)
                 {
-                    case "#showTree":
+                    if (isBlank)
+                    {
+                        break;
+                    }
+                    else if (input == "#showTree")
+                    {
                         showTree = !showTree;
                         Console.WriteLine(showTree ? "Showing parse trees." : "Not showing parse trees.");
                         continue;
-                    case "#cls":
+                    }
+                    else if (input == "#cls")
+                    {
                         Console.Clear();
                         continue;
+                    }
                 }
 
-                var syntaxTree = SyntaxTree.Parse(line);
+                textBuilder.AppendLine(input);
+                var text = textBuilder.ToString();
+                
+                var syntaxTree = SyntaxTree.Parse(text);
+
+                if (!isBlank && syntaxTree.Diagnostics.Any())
+                    continue;
+
                 var compilation = new Compilation(syntaxTree);
                 var result = compilation.Evaluate(variables);
                 
@@ -80,13 +75,12 @@ namespace Kookie.Compiler
                 }
                 else
                 {
-                    var text = syntaxTree.Text;
-                    
                     foreach (var diagnostic in diagnostics)
                     {
-                        var lineIndex = text.GetLineIndex(diagnostic.Span.Start);
+                        var lineIndex = syntaxTree.Text.GetLineIndex(diagnostic.Span.Start);
+                        var line = syntaxTree.Text.Lines[lineIndex];
                         var lineNumber = lineIndex + 1;
-                        var character = diagnostic.Span.Start - text.Lines[lineIndex].Start + 1;
+                        var character = diagnostic.Span.Start - line.Start + 1;
                         
                         Console.WriteLine();
                         
@@ -94,10 +88,13 @@ namespace Kookie.Compiler
                         Console.Write($"({lineNumber}, {character}): ");
                         Console.WriteLine(diagnostic);
                         Console.ResetColor();
+
+                        var prefixSpan = TextSpan.FromBounds(line.Start, diagnostic.Span.Start);
+                        var suffixSpan = TextSpan.FromBounds(diagnostic.Span.End, line.End);
                         
-                        var prefix = line[..diagnostic.Span.Start];
-                        var error = line.Substring(diagnostic.Span.Start, diagnostic.Span.Length);
-                        var suffix = line[diagnostic.Span.End..];
+                        var prefix = syntaxTree.Text.ToString(prefixSpan);
+                        var error = syntaxTree.Text.ToString(diagnostic.Span);
+                        var suffix = syntaxTree.Text.ToString(suffixSpan);
                         
                         Console.Write("    ");
                         Console.Write(prefix);
@@ -113,9 +110,9 @@ namespace Kookie.Compiler
 
                     Console.WriteLine();
                 }
+
+                textBuilder.Clear();
             }
         }
-
-        
     }
 }

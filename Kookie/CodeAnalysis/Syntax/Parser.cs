@@ -6,8 +6,8 @@ namespace Kookie.CodeAnalysis.Syntax
 {
     internal sealed class Parser
     {
-        private readonly SourceText _text;
         private readonly DiagnosticBag _diagnostics = new();
+        private readonly SourceText _text;
         private readonly ImmutableArray<SyntaxToken> _tokens;
         
         private int _position;
