@@ -62,7 +62,7 @@ namespace Kookie.CodeAnalysis.Text
                 }
             }
 
-            if (position > lineStart) AddLine(result, sourceText, position, lineStart, 0);
+            if (position >= lineStart) AddLine(result, sourceText, position, lineStart, 0);
 
             return result.ToImmutable();
         }
@@ -91,7 +91,7 @@ namespace Kookie.CodeAnalysis.Text
 
         public static SourceText From(string text)
         {
-            return new SourceText(text);
+            return new(text);
         }
 
         public override string ToString() => _text;
