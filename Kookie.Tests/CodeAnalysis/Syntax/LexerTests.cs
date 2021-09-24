@@ -33,6 +33,7 @@ namespace Kookie.Tests.CodeAnalysis.Syntax
             var tokens = SyntaxTree.ParseTokens(text);
 
             var token = Assert.Single(tokens);
+            if (token == null) return;
             Assert.Equal(kind, token.Kind);
             Assert.Equal(text, token.Text);
         }

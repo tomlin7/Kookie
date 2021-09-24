@@ -53,6 +53,7 @@ namespace Kookie.Tests.CodeAnalysis.Syntax
             try
             {
                 Assert.True(_enumerator.MoveNext());
+                if (_enumerator.Current == null) return;
                 Assert.Equal(kind, _enumerator.Current.Kind);
                 Assert.IsNotType<SyntaxToken>(_enumerator.Current);
             }

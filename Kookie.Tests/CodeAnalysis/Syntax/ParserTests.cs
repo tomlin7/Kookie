@@ -79,8 +79,8 @@ namespace Kookie.Tests.CodeAnalysis.Syntax
         [MemberData(nameof(GetUnaryOperatorPairsData))]
         public void Parser_UnaryExpression_HonorsPrecedences(SyntaxKind unaryKind, SyntaxKind binaryKind)
         {
-            var unaryPrecedence = SyntaxFacts.GetUnaryOperatorPrecedence(unaryKind);
-            var binaryPrecedence = SyntaxFacts.GetBinaryOperatorPrecedence(binaryKind);
+            var unaryPrecedence = unaryKind.GetUnaryOperatorPrecedence();
+            var binaryPrecedence = binaryKind.GetBinaryOperatorPrecedence();
             var unaryText = SyntaxFacts.GetText(unaryKind);
             var binaryText = SyntaxFacts.GetText(binaryKind);
             var text = $"{unaryText} a {binaryText} b";
@@ -90,7 +90,7 @@ namespace Kookie.Tests.CodeAnalysis.Syntax
             {
                 //   binary
                 //   /   \
-                // unary     b
+                // unary  b
                 //  |
                 //  a
 
