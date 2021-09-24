@@ -71,7 +71,9 @@ namespace Kookie.Compiler
                 
                 if (!diagnostics.Any())
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine(result.Value);
+                    Console.ResetColor();
                 }
                 else
                 {
