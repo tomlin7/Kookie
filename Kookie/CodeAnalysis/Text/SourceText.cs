@@ -91,7 +91,7 @@ namespace Kookie.CodeAnalysis.Text
 
         public static SourceText From(string text)
         {
-            return new SourceText(text);
+            return new(text);
         }
 
         public override string ToString() => _text;
