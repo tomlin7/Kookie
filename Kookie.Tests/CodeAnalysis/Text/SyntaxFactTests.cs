@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Kookie.CodeAnalysis.Syntax;
 using Xunit;
 
-namespace Kookie.Tests.CodeAnalysis.Syntax
+namespace Kookie.Tests.CodeAnalysis.Text
 {
     public class SyntaxFactTests
     {
