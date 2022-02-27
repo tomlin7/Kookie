@@ -14,9 +14,9 @@
     <a href="https://github.com/kookielang/Kookie/actions">
         <img alt="Build status" src="https://img.shields.io/github/workflow/status/kookielang/Kookie/.NET?logo=github&style=for-the-badge">
     </a>
-    <a href="https://dev.azure.com/billysillybilly/Kookie">
+    <!-- <a href="https://dev.azure.com/billysillybilly/Kookie">
         <img alt="Azure Pipelines" src="https://img.shields.io/azure-devops/build/billysillybilly/Kookie/5?logo=azure-pipelines&style=for-the-badge">
-    </a>
+    </a> -->
     <a href="https://github.com/kookielang/Kookie/issues">
         <img alt="GitHub issues" src="https://img.shields.io/github/issues/kookielang/Kookie?style=for-the-badge&logo=github">
     </a>
