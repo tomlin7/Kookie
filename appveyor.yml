@@ -1,10 +1,10 @@
 image: Visual Studio 2019
 
 before_build:
+- choco install dotnet-sdk --version 6.0.200
 - nuget restore
 - choco install opencover.portable
 - choco install codecov
-- choco install dotnet-sdk
 
 build:
   project: Kookie.sln
