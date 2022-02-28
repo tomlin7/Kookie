@@ -24,6 +24,9 @@
         // Keywords
         FalseKeyword,
         TrueKeyword,
+
+        // Nodes
+        CompilationUnit,
         
         // Expressions
         LiteralExpression,
